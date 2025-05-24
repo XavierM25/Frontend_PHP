@@ -1,0 +1,273 @@
+/* Estilos para el contenedor del modal */
+#modalAgregarVideo,
+#modalEditarVideo, 
+#modalEliminarVideo{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Cambiado a center para centrar verticalmente */
+}
+
+#modalEliminarVideo .modalEliminarVideo,
+#modalEditarVideo .modalEditarVideo,
+#modalAgregarVideo .modalAgregarVideo{
+    width: 80%; /* Cambiado a 80% para adaptarse a la vista previa del video */
+    max-width: 800px; /* Aumentado el ancho máximo */
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Agregado espacio interno */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    position: relative;
+    transition: 1s;
+    transform: translateY(0%);
+}
+
+#modalAgregarVideo #closeAgregarVideo,
+#modalEditarVideo #closeEditarVideo,
+#modalEliminarVideo #closeEliminarVideo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #c44a4a;
+    border-radius: 8px;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#modalAgregarVideo .modal-close,
+#modalEditarVideo .modal-close,
+#modalEliminarVideo .modal-close {
+    transform: translateY(-200%);
+}
+
+/* Estilos para la estructura del formulario */
+#modalAgregarVideo .modal-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+#modalAgregarVideo .modal-content .left-column,
+#modalAgregarVideo .modal-content .right-column {
+    width: 48%;
+}
+
+@media (max-width: 768px) {
+    #modalAgregarVideo .modal-content {
+        flex-direction: column;
+    }
+    #modalAgregarVideo .modal-content .left-column,
+    #modalAgregarVideo .modal-content .right-column {
+        width: 100%;
+    }
+}
+
+/* Estilos para los elementos del formulario */
+#modalAgregarVideo .modal-content label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modalAgregarVideo .modal-content textarea,
+#modalAgregarVideo .modal-content input[type="text"],
+#modalAgregarVideo .modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#modalAgregarVideo .modal-content textarea:focus,
+#modalAgregarVideo .modal-content input[type="text"]:focus,
+#modalAgregarVideo .modal-content select:focus {
+    border-color: #007bff;
+}
+
+#modalAgregarVideo .modal-content .inpt-desc textarea {
+    height: 100px;
+}
+
+/* Estilos para el ícono del archivo */
+#modalAgregarVideo .modal-content .file-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#modalAgregarVideo .modal-content .video-file {
+    display: none;
+}
+
+#modalAgregarVideo .modal-content .file-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#modalAgregarVideo .modal-content .file-label i {
+    margin-right: 5px;
+}
+
+#modalAgregarVideo .modal-content .file-label:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el botón de visibilidad */
+#modalAgregarVideo .modal-content .inpt-visibility select {
+    width: calc(100% - 30px);
+}
+
+#modalAgregarVideo .modal-content .visi-right {
+    align-items: center;
+}
+
+#modalAgregarVideo .modal-content .visi-right label {
+    margin-right: 10px;
+}
+
+#modalAgregarVideo .modal-content .visi-cont select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para la vista previa del video */
+#modalAgregarVideo .modal-content .video-preview .item-vide {
+    margin-bottom: 15px;
+}
+
+#modalAgregarVideo .modal-content video {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* ESTILOS MODAL EDITAR */
+
+#modalEditarVideo .modal-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#modalEditarVideo .modal-cont .left-column,
+#modalEditarVideo .modal-cont .right-column {
+    width: 48%;
+}
+
+/* Estilos para los campos de entrada */
+#modalEditarVideo .modal-cont label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modalEditarVideo .modal-cont input[type="text"],
+#modalEditarVideo .modal-cont textarea,
+#modalEditarVideo .modal-cont select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#modalEditarVideo .modal-cont input[type="text"]:focus,
+#modalEditarVideo .modal-cont textarea:focus,
+#modalEditarVideo .modal-cont select:focus {
+    border-color: #007bff;
+}
+
+/* Estilos para el botón */
+#modalEditarVideo .modal-cont button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#modalEditarVideo .modal-cont button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    #modalEditarVideo .modal-cont {
+        flex-direction: column;
+    }
+    #modalEditarVideo .modal-cont .left-column,
+    #modalEditarVideo .modal-cont .right-column {
+        width: 100%;
+    }
+}
+
+
+
+/* ESTILOS MODAL ELIMINAR VIDEO */
+#modalEliminarVideo .modal-texts {
+    text-align: center;
+}
+
+#modalEliminarVideo .modal-texts button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#confirm-delete-btn {
+    background-color: #c44a4a;
+    color: #fff;
+}
+
+#confirm-delete-btn:hover {
+    background-color: #a83232;
+}
+
+#cancel-delete-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#cancel-delete-btn:hover {
+    background-color: #0056b3;
+}
+
+

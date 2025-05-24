@@ -1,0 +1,447 @@
+/*ESTILOS PARA SEPARADOR, FILTRO DE CATEGORIAS*/
+.separator-rank {
+    padding: 26px 26px 13px 26px;
+}
+
+.separator-rank .categories-rank {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.separator-rank .categories-rank li {
+    padding: 8px 12px;
+    background: #e8f3f8;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.separator-rank .categories-rank li.active,
+.separator-rank .categories-rank li:hover {
+    background: #243659;
+    color: #fff;
+}
+
+.separator-rank .subcategories-rank {
+    margin-top: 14px;
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.separator-rank .subcategories-rank > div {
+    display: none;
+}
+
+.separator-rank .subcategories-rank > div.visible {
+    display: flex;
+}
+
+
+.separator-rank .subcategories-rank li {
+    padding: 8px 12px;
+    background: #e8f3f8;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+
+.separator-rank .categories-rank li.active,
+.separator-rank .categories-rank li:hover,
+.separator-rank .subcategories-rank li.active {
+    background: #243659;
+    color: #fff;
+}
+
+
+/* MANEJO DE DISEÑO AL REDUCIR TAMAÑO */
+.rankUser-cont,
+.rankUser-cont .descCont .slide_div,
+.rankUser-cont .descCont .itemRank,
+.rankUser-cont .descCont .itemRank h2,
+.rankUser-cont .descCont .itemRank .userDetails h3,
+.rankUser-cont .descCont .itemRank .userDetails h4,
+.rankUser-cont .descCont .itemRank .optionList .userRecord h3,
+.rankUser-cont .descCont .itemRank .optionList .userRecord i,
+.rankUser-cont .descCont .itemRank .optionList .option p {
+    transition: all 0.5s ease;
+}
+
+.table-rank.hidden {
+    display: none;
+}
+
+.rankUser-cont.reduced .descCont .itemRank > img {
+    display: none;
+}
+
+.rankUser-cont.reduced .descCont .slide_div {
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+
+.rankUser-cont.reduced .descCont .itemRank {
+    padding: 12px;
+    border-radius: 8px; 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.rankUser-cont.reduced .descCont .slide_div {
+    width: 300px;
+    height: auto; 
+    margin: 10px;
+}
+
+.rankUser-cont.reduced .descCont .itemRank h2 {
+    font-size: 36px;
+    gap: 2px;
+}
+
+.rankUser-cont.reduced .descCont .itemRank .userDetails h4 {
+    font-size: 12px;
+}
+
+.rankUser-cont.reduced .descCont .itemRank .optionList .userRecord h3 {
+    width: 50%;
+    font-size: 12px;
+}
+
+.rankUser-cont.reduced .descCont .itemRank .optionList .userRecord i {
+    font-size: 30px;
+}
+
+.rankUser-cont.reduced .descCont .itemRank .optionList{
+    padding: 0px;
+}
+
+.rankUser-cont.reduced .descCont .itemRank .optionList .option{
+    width: 50%;
+}
+
+.rankUser-cont.reduced .descCont .itemRank .optionList .option p {
+    font-size: 14px;
+}
+
+
+/* ESTILOS CONTENIDO PRINCIPAL */
+.rankUser-cont{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.rankUser-cont .descCont{
+    width: 90%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.rankUser-cont .descCont .slide_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    width: 248px;
+    height: 600px;
+    transition: 0.7s;
+}
+
+.main .itemRank{
+    position: relative;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 14px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.main  .itemRank .like{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 8px 8px 5px;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.main .itemRank .like:hover{
+    color: #f86161;
+}
+
+.main .itemRank h2{
+    font-size: 48px;
+    border-bottom: 2px solid red;
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main .itemRank .userDetails{
+    padding: 24px 0px 24px 0px;
+}
+
+.main .itemRank .userDetails h3{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main .itemRank .userDetails h4{
+    font-size: 15px;
+    color: #656565;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main .itemRank > img{
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.main .itemRank .optionList{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 24px;
+}
+
+.main .itemRank .optionList .userRecord{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .itemRank .optionList .userRecord h3{
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main .itemRank .optionList .userRecord i{
+    font-size: 40px;
+}
+
+.main .itemRank .optionList .option{
+    display: flex;
+    align-items: center;
+}
+
+/*EFECTO ZOOM */
+.rankUser-cont .descCont .slide_div {
+    transition: transform 0.7s ease;
+}
+
+.rankUser-cont .descCont .slide_div:hover {
+    transform: scale(1.1);
+}
+
+
+/* Estilos para el botón Ver Más */
+#btnViewMore {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #243659;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px auto;
+    display: block;
+}
+
+#btnViewMore:hover {
+    background-color: #1a2747;
+    transform: scale(1.05);
+}
+
+#btnViewMore:active {
+    transform: scale(0.95);
+}
+
+
+.table-content{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.table-rank{
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para la tabla */
+.table-rank table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-rank table thead {
+    background-color: #243659;
+    color: #fff;
+}
+
+.table-rank table thead th {
+    padding: 12px 15px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.table-rank table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.table-rank table tbody tr:nth-of-type(even) {
+    background-color: #f8f8f8;
+}
+
+.table-rank table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-rank table tbody td {
+    padding: 12px 15px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/*ASIDE STYLES */
+.student-details {
+    margin-top: 20px;
+    position: relative;
+}
+
+.student-details .detailsCon {
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.student-details .detailsCon img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.student-details .detailsCon .detailHead {
+    margin: 10px 0px;
+}
+
+.student-details .detailsCon .detailHead h2 {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.student-details .detailsCon .detailHead p {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.student-details .detailsCon .detailsBody {
+    margin: 20px 0px;
+}
+
+.student-details .detailsCon .detailsBody h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.student-details .detailsCon .detailsBody p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.student-details .detailsCon .detailsForm {
+    margin: 10px 0px;
+}
+
+.student-details .detailsCon .detailsForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.student-details .detailsCon .detailsForm form .detailsInpt {
+    position: relative;
+}
+
+.student-details .detailsCon .detailsForm form .detailsInpt input {
+    width: 350px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 0 15px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #000;
+    outline: none;
+    background-color: #eee;
+    transition: .5s;
+    pointer-events: none; /* Desactiva cualquier interacción del usuario */
+    cursor: not-allowed; /* Cambia el cursor a no permitido */
+}
+
+.student-details .detailsCon .detailsForm form .detailsInpt input:active {
+    border: 2px solid #243659;
+}
+
+.student-details .detailsCon .detailsForm form .detailsInpt label {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+/* Mantiene el efecto visual cuando el campo está enfocado */
+.student-details .detailsCon .detailsForm form .detailsInpt input:focus ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 14px;
+    padding: 0 2px;
+}
+
+.student-details .detailsCon .detailsForm form .detailsInpt input.not-empty ~ label,
+.student-details .detailsCon .detailsForm form .detailsInpt input:focus ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 14px;
+    padding: 0 2px;
+}
+

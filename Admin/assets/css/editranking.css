@@ -1,0 +1,176 @@
+.main .filter-rank{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 5px;
+    gap: 15px;
+}
+
+.main .filter-rank .cate-rank{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.main .filter-rank .subCate-rank{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.main .filter-rank .cate-rank .item{
+    background: #fff;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    cursor: pointer;
+}
+
+.main .filter-rank .subCate-rank .item{
+    background: #fff;
+    width: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main .filter-rank .subCate-rank .item h5{
+    font-size: 14px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+}
+
+.main .filter-rank .subCate-rank .item h5:hover{
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+.main .filter-rank .cate-rank .item:hover,
+.main .filter-rank .subCate-rank.item:hover{
+    box-shadow: none;
+    border-color: #999;
+}
+
+.main .sep-rkng{
+    margin-top: 0;
+}
+
+/*ESTILOS TABLA*/
+.main .list-Rnk {
+    margin-top: 20px;
+}
+
+.main .tbl-deportes table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main .tbl-deportes th, .tbl-deportes td {
+    padding: 8px;
+    text-align: center;
+}
+
+.main .tbl-deportes th {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px 0px 20px 0px;
+}
+
+.main .tbl-deportes tr:nth-child(even) {
+    background-color: #f9f9f9ce;
+}
+
+.main .tbl-deportes tr:hover {
+    background-color: #ffffff;
+}
+
+.main .tbl-deportes button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.main .tbl-deportes button i {
+    font-size: 20px;
+    color: #ff0000;
+}
+
+.main .tbl-deportes button i:hover {
+    color: #5f0000;
+}
+
+.main .cont-delete {
+    text-align: center;
+}
+
+
+
+.right-section .student-rank {
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.right-section .student-rank .fields {
+    margin-bottom: 10px;
+}
+
+.right-section .student-rank .fields label {
+    font-weight: bold;
+}
+
+.right-section .student-rank .fields input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: not-allowed;
+    transition: all .3 ease-in-out;
+}
+
+.right-section .student-rank .fields input:hover {
+    border-color: #007bff;
+}
+
+
+#edit-button{
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#edit-button i {
+    margin-right: 5px;
+}
+
+.disabled {
+    pointer-events: none; /* Evitar que el enlace sea clickeable */
+    opacity: 0.6; /* Reducir la opacidad para indicar que está deshabilitado */
+    cursor: not-allowed; /* Cambiar el cursor a default */
+    text-decoration: none; /* Eliminar subrayado */
+    color: #888; /* Color de texto gris */
+}

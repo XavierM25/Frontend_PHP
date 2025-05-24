@@ -1,0 +1,391 @@
+.main .edit-info{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.main .edit-info .basic-info{
+    width: 80%;
+    height: 100%;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main .edit-info .basic-info form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 40px;
+}
+
+.main .edit-info .basic-info h1{
+    font-size: 50px;
+    padding: 0px 40px;
+}
+
+.main .edit-info .basic-info .item{
+    width: 90%;
+}
+
+.main .edit-info .basic-info label{
+    margin: 4px 0;
+    padding: 0px 5px;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.main .edit-info .basic-info input,select{
+    background: #eee;
+    border: 1px solid #eee;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease
+}
+
+.main .edit-info .basic-info input:hover,
+.main .edit-info .basic-info select:hover{
+    border: 1px solid #243659;
+    color: #243659;
+}
+
+.main .edit-info .basic-info .buttons{
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+.main .edit-info .basic-info .buttons .save{
+    background-color: #243659;
+    color: #fff;
+    font-size: 15px;
+    padding: 15px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .edit-info .basic-info .buttons .back{
+    background-color: transparent;
+    color: #243659;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-weight: 00;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .edit-info .basic-info .buttons .save:hover{
+    background-color: #4c6dad;
+}
+
+.main .edit-info .basic-info .buttons .back:hover{
+    border: 1px solid #4c6dad;
+    color: #4c6dad;
+}
+
+
+/* INFORMACIÓN PRINICPAL */
+
+.right-section .imp-info{
+    background: #fff;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.right-section .imp-info .tabs-container .tabs a{
+    text-decoration: none;
+}
+
+.right-section .imp-info header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+.right-section .imp-info header .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.right-section .imp-info header .info .edit{
+    padding: 6px;
+    font-weight: 600;
+    width: 100%;
+    background: #fafafa;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .imp-info header .info .edit:hover{
+    color: #243659;
+    border: 1px solid #243659;
+}
+
+.right-section .imp-info header .info .edit i{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.right-section .imp-info header .profile{
+    width: 400px;
+}
+
+.right-section .imp-info header .profile img{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-top: -50%;
+    border: 6px solid #fff;
+}
+
+.right-section .imp-info .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.right-section .imp-info .about h2{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.right-section .imp-info .about p{
+    font-size: 16px;
+    color: #424242;
+}
+
+.right-section .imp-info .tabs-container{
+    overflow-x: auto;
+    margin-bottom: 4px;
+    width: 100%;
+}
+
+.right-section .imp-info .tabs-container .tabs{
+    position: relative;
+    display: flex;
+    border: 1px solid #e8eaf6;
+    border-radius: 8px;
+    list-style: none;
+}
+
+.right-section .imp-info .tabs-container .tabs li{
+    z-index: 2;
+}
+
+.right-section .imp-info .tabs-container .tabs li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    min-width: 112px;
+    outline: none;
+    padding: 12px 16px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.right-section .imp-info .tabs-container .tabs li a:hover,
+.right-section .imp-info .tabs-container .tabs li a.active{
+    color: #243659;
+}
+
+.right-section .imp-info .tabs-container #active-tab{
+    position: absolute;
+    width: 100%;
+    width: 112px;
+    height: 100%;
+    background: #cdd8ec;
+    z-index: 1;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.right-section .imp-info .tab-content{
+    display: none;
+    overflow-y: auto;
+}
+
+.right-section .imp-info .active-tab-content{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 350px;
+    padding: 0 4px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    width: 80%;
+    transition: all 0.5s ease;
+    gap: 10px;
+}
+
+.right-section .imp-info .tabs-container .tabs li:nth-child(1):has(.active)~#active-tab{
+    transform: translateX(0);
+}
+
+.right-section .imp-info .tabs-container .tabs li:nth-child(2):has(.active)~#active-tab{
+    transform: translateX(112px);
+}
+
+.right-section .imp-info .tab-content .vote{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1px;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.right-section .imp-info .tab-content .vote input{
+    display: flex;
+    background: #fafafa;
+    gap: 8px;
+    border-radius: 8px;
+    color: #757575;
+    padding: 10px 15px;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.right-section .imp-info .tab-content .vote input:hover{
+    border: 1px solid #243659;
+    color: #243659;
+}
+
+.right-section .imp-info button{
+    background-color: #243659;
+    color: #fff;
+    padding: 15px 45px;
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.right-section .imp-info button:hover{
+    background-color: #4c6dad;
+}
+
+
+/* Estilos para el contenedor del modal */
+#modalEditImage {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el modal */
+#modalEditImage .modal {
+    width: 40%;
+    height: 50%;
+    max-width: 500px; /* Limitamos el ancho máximo */
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /*padding: 20px; /* Añadimos espacio interno */
+    /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    position: relative;
+    transition: 1s;
+    transform: translateY(0%);
+}
+
+/* Estilos para la imagen */
+#modalEditImage .modal img {
+    width: 150px; /* Reducimos el tamaño */
+    height: 150px;
+    border-radius: 50%; /* Forma circular */
+    margin: 0 auto 20px; /* Centramos la imagen */
+}
+
+/* Estilos para el texto */
+#modalEditImage.modal-texts {
+    margin-bottom: 20px; /* Añadimos espacio inferior */
+}
+
+/* Estilos para el input */
+#modalEditImage .modal-texts input[type="file"] {
+    margin-top: 10px; /* Espacio entre la imagen y el input */
+}
+
+/* Estilos para el mensaje */
+#modalEditImage .modal-texts p {
+    margin-top: 10px; /* Espacio entre el input y el mensaje */
+    color: #777; /* Color de texto gris */
+}
+
+#modalEditImage .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #c44a4a;
+    border-radius: 8px;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#modalEditImage .modal-close{
+    transform: translateY(-200%);
+}

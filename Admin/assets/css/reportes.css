@@ -1,0 +1,198 @@
+.reports-cont {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.reports-cont .tlt {
+    margin-bottom: 20px;
+}
+
+.reports-cont .columns {
+    display: flex;
+    gap: 20px;
+}
+
+.reports-cont .columns .left {
+    width: 30%; /* Ajusta el tamaño de la columna izquierda */
+}
+
+.reports-cont .columns .right {
+    background-color: #fcfcfc;
+    border-radius: 14px;
+    padding: 10px;
+    width: 70%; /* Ajusta el tamaño de la columna derecha */
+    max-width: 800px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    overflow: hidden;
+}
+
+.reports-cont .columns .right .preview h2 {
+    margin-bottom: 20px;
+}
+
+.reports-cont .columns .inpts-reports .module,
+.reports-cont .columns .inpts-reports .format {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.reports-cont .columns .inpts-reports .dates {
+    display: flex;
+    gap: 10px; /* Añade espacio entre las fechas */
+    margin-bottom: 8px;
+}
+
+.reports-cont .columns .inpts-reports .dates .start-date,
+.reports-cont .columns .inpts-reports .dates .end-date {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.reports-cont .columns .inpts-reports .filters-order {
+    display: flex;
+    gap: 10px; /* Añade espacio entre los filtros */
+    margin-bottom: 8px;
+}
+
+.reports-cont .columns .inpts-reports .filters-order .filters,
+.reports-cont .columns .inpts-reports .filters-order .orders {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.reports-cont .columns .inpts-reports .btns-reports {
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+}
+
+.reports-cont .columns .inpts-reports .btns-reports .report {
+    padding: 10px;
+    background-color: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.reports-cont .columns .inpts-reports .btns-reports .report:hover {
+    background-color: #18181be1;
+}
+
+.reports-cont .columns .inpts-reports .btns-reports .preview {
+    padding: 10px;
+    color: #18181b;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.reports-cont .columns .inpts-reports .btns-reports .preview:hover {
+    background-color: #ccc;
+}
+
+.reports-cont .columns .inpts-reports input,
+.reports-cont .columns .inpts-reports select {
+    padding: 8px 12px;
+    border: 1px solid #e4e4e7;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reports-cont .columns .inpts-reports input:focus,
+.reports-cont .columns .inpts-reports select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.history .cont-hist {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.element-history {
+    background-color: #eeeeee;
+    padding: 12px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+}
+
+.element-history h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.element-history .details-element {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.element-history .details-element h5 {
+    font-size: 14px;
+    color: #555;
+}
+
+.element-history .details-element p {
+    font-size: 14px;
+    color: #333;
+}
+
+.element-history .btn-history {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.element-history .btn-history button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.element-history .btn-history button:hover {
+    color: #0056b3;
+}
+
+.reports-cont .columns .right .preview{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.reports-cont .columns .right .preview .cont-preview {
+    max-height: 400px; /* Altura máxima del contenedor para el scroll */
+    overflow: auto; /* Habilitar el scroll vertical cuando sea necesario */
+    padding: 10px; /* Espaciado interno del contenedor */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+.table-preview {
+    table-layout: auto; /* Fija el layout de la tabla para evitar la expansión horizontal */
+    border-collapse: collapse;
+    margin-top: 10px;
+    width: 100px;
+}
+
+.table-preview th, .table-preview td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+

@@ -1,0 +1,233 @@
+.ins-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 40px 30px; /* Aumenta el espacio interno */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.txt-right {
+    text-align: center; /* Alinea el texto al centro */
+    margin-bottom: 20px;
+}
+
+.txt-right h3 {
+    margin-top: 0;
+    font-size: 42px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    color: #243659;
+    margin-bottom: 10px; /* Agrega un espacio inferior */
+}
+
+.txt-right p {
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    color: #5e5e5e;/* Agrega un espacio inferior */
+}
+
+.txt-right span {
+    font-size: 12px; /* Aumenta el tamaño de la fuente */
+    color: #9c4c9c;
+    display: block; /* Muestra en una línea separada */
+    margin-top: 5px; /* Agrega un espacio superior */
+}
+
+.form-cont {
+    width: 100%;
+}
+
+.cont-field {
+    margin-bottom: 30px;
+}
+
+.cont-field h4 {
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    margin-bottom: 15px; /* Agrega un espacio inferior */
+    color: #243659;
+}
+
+.cont-field .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.checkbox-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.field-input {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.field-input input,
+.field-input select,
+.field-input textarea {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    transition: all 0.3s;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+}
+
+.field-input input:focus,
+.field-input select:focus,
+.field-input textarea:focus {
+    outline: none;
+    border-color: #8a8a8a;
+    box-shadow: 0 0 5px rgba(138, 138, 138, 0.5);
+}
+
+.field-input textarea {
+    height: 120px;
+    resize: none;
+}
+
+.field-input .char-counter {
+    font-size: 14px; /* Aumenta el tamaño de la fuente */
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.button-field {
+    text-align: center;
+}
+
+.button-field button {
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    background-color: #243659;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.button-field button:hover {
+    background-color: #365491;
+}
+
+
+/*SLIDER STYLES */
+.slider {
+    width: 100%;
+    height: 550px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider .list {
+    display: flex;
+    transition: transform 0.5s ease; /* Agrega transición */
+}
+
+.slider .list .itemSl {
+    flex: 0 0 100%;
+}
+
+.slider .list .itemSl img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.dotSl {
+    position: absolute;
+    bottom: 10px; /* Ajusta la posición vertical según sea necesario */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dotSl .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    bottom: 100%; /* Mueve los puntos de navegación encima del slider */
+}
+
+.dotSl .dot.active {
+    background-color: #243659;
+}
+
+
+.right-section .vacancy-section {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    padding: 35px 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.right-section .vacancy-section .vacancy-categories {
+    display: flex;
+    gap: 10px; /* Espacio entre los inputs */
+}
+
+.right-section .vacancy-section .vacancy-categories input {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #eee;
+    font-size: 16px;
+    pointer-events: none;
+    transition: transform 0.3s ease; /* Bloquea la interacción con el input */
+}
+
+
+.right-section .vacancy-section .vacancy-info {
+    display: flex;
+    gap: 30px; /* Espacio entre los elementos de información */
+    margin-top: 20px;
+}
+
+.right-section .vacancy-section .vacancy-info div {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; 
+}
+
+.right-section .vacancy-section .vacancy-info div p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.right-section .vacancy-section .vacancy-info div p span {
+    font-weight: bold;
+    color: #e30512; /* Color rojo para los números importantes */
+}
+
+.right-section .vacancy-section .vacancy-info div i {
+    font-size: 18px;
+    color: #243659; /* Color rojo para los números importantes */
+}
+
+.right-section .vacancy-section .vacancy-info div:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
