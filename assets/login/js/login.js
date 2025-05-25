@@ -46,7 +46,6 @@ document.getElementById('log-sign-in').addEventListener('click', function(e) {
     .catch(error => console.error('Error:', error));
 });
 
-
 // GOOGLE
 document.addEventListener('DOMContentLoaded', function() {
     const googleIcon = document.getElementById('google-icon');
