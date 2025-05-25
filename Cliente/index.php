@@ -1,7 +1,7 @@
 
-<?php require_once("view/head/header.php");?>
+<?php require_once("../components/Cliente/header.php");?>
 
-<?php require_once("view/head/main.php");?>
+<?php require_once("../components/Cliente/main.php");?>
 
 <section class="banner">
     <div class="share">
@@ -39,7 +39,7 @@
     
 </section>
 
-<?php require_once("view/head/aside.php"); ?>
+<?php require_once("../components/Cliente/aside.php"); ?>
 
 <h3>Reproduciendo Actualmente</h3>
 
@@ -62,8 +62,8 @@
 
 </section>
 
-<script src="assets/js/dsbrd-pr.js"></script>
-<script src="assets/js/API/index.js"></script>
-<script src="assets/js/navigation.js"></script>
+<script src="../assets/Cliente/js/dsbrd-pr.js"></script>
+<script src="../assets/Cliente/js/API/index.js"></script>
+<script src="../assets/Cliente/js/navigation.js"></script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <?php
-    require_once("view/head/header.php");
+    require_once("../components/Cliente/header.php");
 ?>
 
 <?php
-    require_once("view/head/main.php");
+    require_once("../components/Cliente/main.php");
 ?>
 
 <section class="separator-rank">
@@ -42,7 +42,7 @@
 </section>
 
 <?php
-require_once("view/head/aside.php");
+require_once("../components/Cliente/aside.php");
 ?>
     <h3>Detalle Estudiante</h3>
     <section class="student-details" id="student-details">
@@ -51,7 +51,7 @@ require_once("view/head/aside.php");
                 <h2 id="studetPosition">#1</h2>
                 <p id="studentCategorySubca">- | -</p>
             </div>
-            <img id="studentImage" src="assets/images/profile.png" alt="">
+            <img id="studentImage" src="../assets/Cliente/images/profile.png" alt="">
             <div class="detailsBody">
                 <h3 id="studentFullName">null</h3>
                 <p id="studentCareer">null</p>
@@ -77,7 +77,7 @@ require_once("view/head/aside.php");
     </section>
 </aside>
 
-<script src="assets/js/navigation.js"></script>
-<script src="assets/js/API/ranking.js"></script>
+<script src="../assets/Cliente/js/navigation.js"></script>
+<script src="../assets/Cliente/js/API/ranking.js"></script>
 </body>
 </html>

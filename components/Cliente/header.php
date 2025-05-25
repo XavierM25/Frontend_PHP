@@ -1,5 +1,5 @@
 <?php
-require_once("view/head/head.php");
+require_once("head.php");
 ?>
 
 <header class="left-section">

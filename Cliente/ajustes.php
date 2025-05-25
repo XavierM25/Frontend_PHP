@@ -1,9 +1,9 @@
 <?php 
-    require_once("view/head/header.php");
+    require_once("../components/Cliente/header.php");
 ?>
 
 <?php
-    require_once("view/head/main.php");
+    require_once("../components/Cliente/main.php");
 ?>
 
 
@@ -36,7 +36,7 @@
     </section>
 
 <?php
-require_once("view/head/aside.php");
+require_once("../components/Cliente/aside.php");
 ?>
 
     <section class="settings-section">
@@ -52,7 +52,7 @@ require_once("view/head/aside.php");
     </section>
 </aside>
 
-<script src="assets/js/navigation.js"></script>
-<script src="assets/js/ajustes.js"></script>
+<script src="../assets/Cliente/js/navigation.js"></script>
+<script src="../assets/Cliente/js/ajustes.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-    require_once("view/head/header.php");
+    require_once("../components/Cliente/header.php");
 ?>
 
 <!-- Formulario para subir la imagen de perfil -->
@@ -15,7 +15,7 @@
 
 
 <?php
-require_once("view/head/main.php");
+require_once("../components/Cliente/main.php");
 ?>
 
 <section class="edit-info">
@@ -111,7 +111,7 @@ require_once("view/head/main.php");
 </section>
 
 <?php
-require_once("view/head/aside.php");
+require_once("../components/Cliente/aside.php");
 ?>
 
 <h3>Información Login</h3>
@@ -189,8 +189,8 @@ require_once("view/head/aside.php");
 </section>        
 </aside>
 
-<script src="assets/js/edicliente.js"></script>
-<script src="assets/js/API/perfil.js"></script>
-<script src="assets/js/navigation.js"></script>
+<script src="../assets/Cliente/js/edicliente.js"></script>
+<script src="../assets/Cliente/js/API/perfil.js"></script>
+<script src="../assets/Cliente/js/navigation.js"></script>
 </body>
 </html>
