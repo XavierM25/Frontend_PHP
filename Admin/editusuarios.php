@@ -1,5 +1,5 @@
 <?php
-    require_once("view/head/header.php");
+    require_once("../components/admin/header.php");
 ?>
 
 <div id="modalEditImage">
@@ -139,7 +139,7 @@
     </div>
 </div>
 
-    <?php require_once("view/head/main.php"); ?>
+    <?php require_once("../components/admin/main.php"); ?>
 
     <h3 class="separator">Administrar Usuarios</h3>
 
@@ -165,7 +165,7 @@
         </table>
     </section>
 
-    <?php require_once("view/head/aside.php"); ?>
+    <?php require_once("../components/admin/aside.php"); ?>
 
     <h3>Detalles de Usuario</h3>
 
@@ -298,9 +298,9 @@
     </section>
 </aside>
 
-<script src="assets/js/dsbrd-ad.js"></script>
-<script src="assets/js/API/usuarios.js"></script>
-<script src="assets/js/navigation.js"></script>
+<script src="../assets/admin/js/dsbrd-ad.js"></script>
+<script src="../assets/admin/js/API/usuarios.js"></script>
+<script src="../assets/admin/js/navigation.js"></script>
 </body>
 
 </html>

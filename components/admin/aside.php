@@ -41,7 +41,7 @@
                 }
 
                 // Actualizar la imagen de perfil si existe
-                const userProfileImg = document.getElementById('user-profile-img');
+                const userProfileImg = document.getElementById('../../assets/admin/img/profile.png');
                 if (userProfileImg && data.data.imagen_perfil) {
                     const perfilImageUrl = 'http://127.0.0.1:8000/' + data.data.imagen_perfil;
                     userProfileImg.src = perfilImageUrl;

@@ -1,5 +1,5 @@
 <?php
-    require_once("view/head/header.php");
+    require_once("../components/admin/header.php");
 ?>
 
 <!-- Modals -->
@@ -207,7 +207,7 @@
 
 
 <?php
-    require_once("view/head/main.php");
+    require_once("../components/admin/main.php");
 ?>
 
 <h3 class="separator">
@@ -235,7 +235,7 @@
 </section>
 
 <?php
-require_once("view/head/aside.php");
+require_once("../components/admin/aside.php");
 ?>
 
     <h3 id="last-preview-video">Último Video Subido</h3>
@@ -271,9 +271,10 @@ require_once("view/head/aside.php");
         
     </div>
 </aside>
-<script src="assets/js/API/videos.js"></script>
-<script src="assets/js/dsbrd-ad.js"></script>
-<script src="assets/js/navigation.js"></script>
+<script src="../assets/admin/js/API/videos.js"></script>
+<script src="../assets/admin/js/dsbrd-ad.js"></script>
+<script src="../assets/admin/js/navigation.js"></script>
+
 </body>
 
 </html>

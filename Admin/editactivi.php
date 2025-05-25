@@ -1,9 +1,9 @@
 <?php
-    require_once("view/head/header.php");
+    require_once("../components/admin/header.php");
 ?>
 
 <?php
-    require_once("view/head/main.php");
+    require_once("../components/admin/main.php");
 ?>
 
 <h3 class="separator">Administrar Actividades Culturales</h3>
@@ -117,9 +117,9 @@ require_once("view/head/aside.php");
     </div>
 </section>
 
-<script src="assets/js/API/actividades.js"></script>
-<script src="assets/js/dsbrd-ad.js"></script>
-<script src="assets/js/navigation.js"></script>
+<script src="../assets/admin/js/API/actividades.js"></script>
+<script src="../assets/admin/js/dsbrd-ad.js"></script>
+<script src="../assets/admin/js/navigation.js"></script>
 </body>
 
 </html>

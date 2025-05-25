@@ -1,9 +1,8 @@
-
 <?php
-    require_once("view/head/header.php");
+    require_once("../components/admin/header.php");
 ?>
 <?php
-    require_once("view/head/main.php");
+require_once("../components/admin/main.php");
 ?>
 
 <h3 class="separator">
@@ -53,7 +52,8 @@
         <p id="noRecentActivity" style="display: none;">No se encontró actividad reciente</p>
 
 <?php
-require_once("view/head/aside.php");
+
+require_once("../components/admin/aside.php");
 ?>
 
     <section class="widgets">
@@ -95,10 +95,10 @@ require_once("view/head/aside.php");
         </div>
     </section>
 </aside>
+<script src="../assets/js/admin/dsbrd-ad.js"></script>
+<script src="../assets/js/admin/navigation.js"></script>
+<script src="../assets/js/admin/API/index.js"></script>
 
-    <script src="assets/js/dsbrd-ad.js"></script>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/API/index.js"></script>
 </body>
 
 </html>

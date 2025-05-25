@@ -1,14 +1,7 @@
-<?php
-    require_once("view/head/header.php");
-?>
+<?php require_once("../components/admin/header.php"); ?>
+<?php require_once("../components/admin/main.php"); ?>
 
-<?php
-    require_once("view/head/main.php");
-?>
-
-<h3 class="separator">
-    Reportes
-</h3>
+<h3 class="separator">Reportes</h3>
 
 <div class="reports-cont">
     <div class="tlt">
@@ -50,17 +43,12 @@
                 </div>
 
                 <div class="filters-order">
-
                     <div class="orders" id="orders-users">
-                        <!-- Opciones de Orden para Usuarios -->
                         <label for="orders-users-select">Ordenar por:</label>
-                        <select name="orders" id="orders-users-select">
-<!-- -->
-                        </select>
+                        <select name="orders" id="orders-users-select"></select>
                     </div>
 
                     <div class="orders" id="orders-order">
-                        <!-- Filtros para Usuarios -->
                         <label for="orden">Orden:</label>
                         <select id="orden" name="orden">
                             <option value="asc">Ascendente</option>
@@ -79,38 +67,32 @@
         <div class="right">
             <h4>Previsualización</h4>
             <div class="preview">
-                <div class="cont-preview">
-                </div>
+                <div class="cont-preview"></div>
             </div>
         </div>
     </div>
 </div>
 
-
-
-<?php
-require_once("view/head/aside.php");
-?>
+<?php require_once("../components/admin/aside.php"); ?>
 
 <h3 class="separator"><i class="ri-history-line"></i> Historial</h3>
 
 <section class="history">
-    <div class="cont-hist">
-        
-
-    </div>
+    <div class="cont-hist"></div>
 </section>
-
 </aside>
-<script src="assets/js/API/reportes.js"></script>
-<script src="assets/js/dsbrd-ad.js"></script>
-<script src="assets/js/navigation.js"></script>
+
+ 
+<script src="../assets/admin/js/API/reportes.js"></script>
+<script src="../assets/admin/js/dsbrd-ad.js"></script>
+<script src="../assets/admin/js/navigation.js"></script>
+
 <script>
     function updateOrderOptions() {
         const module = document.getElementById('modules').value;
         const orderSelect = document.getElementById('orders-users-select');
         let optionsHTML = '';
-    
+
         switch (module) {
             case 'Usuarios':
                 optionsHTML = `
@@ -140,13 +122,12 @@ require_once("view/head/aside.php");
                 `;
                 break;
         }
-    
+
         orderSelect.innerHTML = optionsHTML;
     }
-    
-    // Llamar la función cuando la página se carga para establecer las opciones iniciales
+
     document.addEventListener('DOMContentLoaded', updateOrderOptions);
 </script>
-</body>
 
+</body>
 </html>
