@@ -1,9 +1,9 @@
 <?php
-    require_once("../components/admin/header.php");
+require_once("../components/admin/header.php");
 ?>
 
 <?php
-    require_once("../components/admin/main.php");
+require_once("../components/admin/main.php");
 ?>
 
 <h3 class="separator">Administrar Actividades Culturales</h3>
@@ -27,7 +27,7 @@
                 <ul>
                 </ul>
             </div>
-            <form action=""  method="post" class="create-subcate" id="createSubCate">
+            <form action="" method="post" class="create-subcate" id="createSubCate">
                 <div class="title">
                     <h3>Crear Subcategoría</h3>
                 </div>
@@ -65,7 +65,7 @@
 </section>
 
 <?php
-require_once("view/head/aside.php");
+require_once("../components/admin/aside.php");
 ?>
 
 <h3 class="separator">Horarios</h3>
@@ -95,7 +95,7 @@ require_once("view/head/aside.php");
         <div class="btns-sucate">
             <button type="submit" id="btnCrearHorario" class="btn-agregar-horario">Agregar Horario</button>
         </div>
-    </form>   
+    </form>
 </section>
 
 <h3 class="separator">Vacantes</h3>

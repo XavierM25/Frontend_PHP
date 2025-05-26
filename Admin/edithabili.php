@@ -1,9 +1,9 @@
 <?php
-    require_once("../components/admin/header.php");
+require_once("../components/admin/header.php");
 ?>
 
 <?php
-    require_once("../components/admin/main.php");
+require_once("../components/admin/main.php");
 ?>
 
 <h3 class="separator">Administrar Habilidades</h3>
@@ -28,7 +28,7 @@
 </section>
 
 <?php
-    require_once("../components/admin/aside.php");
+require_once("../components/admin/aside.php");
 ?>
 
 <h3 class="Separator">Asignar Categoria</h3>
@@ -60,7 +60,7 @@
             <option value="Estudiante Destacado">Estudiante Destacado</option>
         </select>
     </div>
-    
+
     <div class="btns-abilities">
         <button id="assign-btn">Asignar</button>
         <button id="edit-btn">Editar</button>
@@ -77,4 +77,5 @@
 <script src="../assets/admin/js/dsbrd-ad.js"></script>
 <script src="../assets/admin/js/navigation.js"></script>
 </body>
+
 </html>
