@@ -1,0 +1,108 @@
+
+.settings-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.settings-header h3 {
+    font-size: 32px;
+    color: #243659;
+}
+
+.settings-section {
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-section h4 {
+    font-size: 24px;
+    color: #243659;
+    margin-bottom: 10px;
+}
+
+.setting-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    font-size: 16px;
+    color: #243659;
+    margin-bottom: 5px;
+}
+
+.setting-item select,
+.setting-item input[type="password"],
+.setting-item input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.setting-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.setting-item button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #243659;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.setting-item button:hover {
+    background-color: #365491;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-container {
+        padding: 15px;
+    }
+
+    .settings-header h3 {
+        font-size: 28px;
+    }
+
+    .settings-section {
+        padding: 15px;
+    }
+
+    .settings-section h4 {
+        font-size: 20px;
+    }
+
+    .setting-item label {
+        font-size: 14px;
+    }
+
+    .setting-item select,
+    .setting-item input[type="password"],
+    .setting-item input[type="file"] {
+        font-size: 14px;
+    }
+
+    .setting-item button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

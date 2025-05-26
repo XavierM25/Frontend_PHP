@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-    <link rel="stylesheet" href="../../assets/css/LoginA.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>Login | Admin</title>
 </head>
 <body>
@@ -32,12 +32,12 @@
                     <input type="password" name="contra" id="password" placeholder="Contraseña">
                 </div>
                 <button type="submit" id="loginAction">Iniciar Sesión</button>
-                <a href="../../Login/recuperar.php">Olvidaste tu contraseña?</a>
+                <a href="../Login/recuperar.php">Olvidaste tu contraseña?</a>
                 <div class="redirect-admin">
-                    <a id="redirect-client" href="../../Login/login.php">Ingresa como Estudiante</a>
+                    <a id="redirect-client" href="../Login/login.php">Ingresa como Estudiante</a>
                 </div>
             </form>
         </div>
     </div>
-    <script src="../../auth/Login-admin/LoginA.php"></script>
+    <script src="assets/js/API/loginAdmin.js"></script>
 </html>

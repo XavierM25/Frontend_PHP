@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../assets/login/css/index.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <title>UCV | Login</title>
 </head>
 
@@ -202,9 +202,9 @@
             </div>
         </section>
     </div>
-    <script src="../assets/login/js/validar.js"></script>
-    <script src="../assets/login/js/movimiento.js"></script>
-    <script src="../assets/login/js/login.js"></script>
-    <script src="../assets/login/js/register.js"></script>
+    <script src="assets/js/validar.js"></script>
+    <script src="assets/js/movimiento.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/register.js"></script>
 </body>
 </html>
