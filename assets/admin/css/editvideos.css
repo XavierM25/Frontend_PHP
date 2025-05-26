@@ -1,0 +1,135 @@
+.main #btnAgregarVideo{
+    border: none;
+    background: #1976d2;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.main .video-table table{
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    border-radius: 14px;
+    border-spacing: 0 8px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main .video-table table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .video-table table thead th{
+    align-items: center;
+    justify-content: center;
+}
+.main .video-table table thead tr th{
+    padding: 15px 0 0 12px;
+    text-align: center;
+}
+
+.main .video-table table tbody tr.selected,
+.main .video-table table tbody tr:hover{
+    border-radius: 14px;
+    background: #e8eaf6;
+}
+
+.main .video-table table tbody tr td{
+    padding: 16px 0px;
+    text-align: center;
+}
+
+.main .video-table table tbody tr td.name,
+.main .video-table table tbody tr td.last-namePa,
+.main .video-table table tbody tr td.last-nameMa,
+.main .video-table table tbody tr td.user,
+.main .video-table table tbody tr td.role
+{
+    color: #999;
+    font-size: 14px;
+}
+
+.main .video-table table tbody tr td.more i{
+    font-size: 20px;
+}
+
+
+.main .video-table table tbody tr td.moreVid i{
+    font-size: 20px;
+}
+
+/* Right Section Estilos */
+
+.right-section {
+    flex: 2;
+    padding: 25px;
+}
+
+.right-section h3 {
+    color: #364670;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.right-section .latest-video {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.right-section .latest-video video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.right-section .details-video{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.right-section .details-video .cont-fech{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+}
+
+.right-section .details-video .cont-deta{
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    width: 100%;
+}
+
+.right-section .details-video .cont-fech input,
+.right-section .details-video .cont-fech select{
+    width: 100%;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    background: #eee;
+    color: #243659;
+    outline: none;
+}
+
+.right-section .details-video .cont-fech label{
+    font-weight: 500;
+}
+
+
+

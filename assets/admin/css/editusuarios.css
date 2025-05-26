@@ -1,0 +1,817 @@
+#modalAgregarUsuario,
+#modalEliminarUsuario{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalAgregarUsuario .modalAgregarUsuario,
+#modalEliminarUsuario .modalEliminarUsuario{
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 1s;
+    transform: translateY(0%);
+}
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content{
+    align-items: center;
+    justify-content: center;
+}
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs{
+    width: 100%;
+    padding: 0px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group{
+    position: relative;
+    margin: 15px;
+}
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group input,
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group select{
+    width: 100%;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    background: #eee;
+    color: #243659;
+    outline: none;
+}
+
+
+#new-fechNac::-webkit-datetime-edit-fields-wrapper {
+    Opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#new-fechNac.show-datepicker::-webkit-datetime-edit-fields-wrapper {
+    opacity: 1;
+}
+
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 12px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group input:focus ~ label,
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group input.not-empty ~ label,
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group select:focus ~ label,
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .inputs-info .form-group select.not-empty ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 11px;
+    padding: 0 2px;
+    background-color: transparent;
+}
+
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .image-preview{
+    width: 320px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.image-preview input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#modalAgregarUsuario .modalAgregarUsuario .modal-content .modal-inputs .image-preview img{
+    width: 100%;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-preview label {
+    font-size: 20px;
+    width: 50%;
+    background-color: #c44a4a;
+    color: white;
+    padding: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.image-preview button {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #243659;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.image-preview button:hover {
+    background-color: #2b5ec2;
+}
+
+
+
+#modalAgregarUsuario #closeAgregarUsuario,
+#modalEliminarUsuario #closeEliminarUsuario{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #c44a4a;
+    border-radius: 8px;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#modalAgregarUsuario .modal-close,
+#modalEliminarUsuario .modal-close{
+    transform: translateY(-200%);
+}
+
+
+/* Estilos para el modal de eliminación de usuario */
+#modalEliminarUsuario {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalEliminarUsuario .modalEliminarUsuario {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 1s;
+    transform: translateY(0%);
+}
+
+#modalEliminarUsuario .modal-texts h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#modalEliminarUsuario .modal-texts p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el modal de eliminación de usuario */
+#modalEliminarUsuario {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalEliminarUsuario .modalEliminarUsuario {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: 1s;
+    transform: translateY(0%);
+}
+
+#modalEliminarUsuario .modal-texts h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#modalEliminarUsuario .modal-texts p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#modalEliminarUsuario .modal-texts button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+#modalEliminarUsuario .modal-texts #confirm-delete-btn {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+#modalEliminarUsuario .modal-texts #confirm-delete-btn:hover {
+    background-color: #b71c1c;
+}
+
+#modalEliminarUsuario .modal-texts #cancel-delete-btn {
+    background-color: transparent;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+}
+
+#modalEliminarUsuario .modal-texts #cancel-delete-btn:hover {
+    background-color: #f5f5f5;
+}
+
+#modalEliminarUsuario #closeEliminarUsuario {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #c44a4a;
+    border-radius: 8px;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#modalEliminarUsuario .modal-close {
+    transform: translateY(-200%);
+}
+
+.main #btnAgregarUsuario{
+    border: none;
+    background: #1976d2;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 20px;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .details-info{
+    background: #fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.right-section .details-info .tabs-container .tabs a{
+    text-decoration: none;
+}
+
+.right-section .details-info header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 12px;
+}
+
+.right-section .details-info header .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.right-section .details-info header .info .edit{
+    padding: 6px;
+    font-weight: 600;
+    width: 100%;
+    background: #fafafa;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .details-info header .info .edit:hover{
+    color: #243659;
+    border: 1px solid #243659;
+}
+
+.right-section .details-info header .info .edit i{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.right-section .details-info header .profile{
+    width: 400px;
+}
+
+.right-section .details-info header .profile img{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-top: -50%;
+    border: 6px solid #fff;
+}
+
+.right-section .details-info .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.right-section .details-info .about .carrera{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.right-section .details-info .about .user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.right-section .details-info .about .user h2{
+    font-size: 30px;
+}
+.right-section .details-info .about .user i{
+    font-size: 20px;
+    color: #424242;
+    cursor: pointer;
+}
+
+.right-section .details-info .about .carrera p{
+    font-size: 16px;
+    color: #424242;
+}
+
+.right-section .details-info .about .carrera i{
+    font-size: 18px;
+    color: #424242;
+    cursor: pointer;
+}
+
+.right-section .details-info .about .user h2.editable,
+.right-section .details-info .about .carrera p.editable {
+    border-bottom: 1px solid transparent; /* Línea de separación */
+    cursor: text; /* Cambia el cursor al puntero del texto */
+}
+
+.right-section .details-info .about .user h2.editable:focus,
+.right-section .details-info .about .carrera p.editable:focus {
+    outline: none; /* Elimina el contorno del enfoque */
+    border-bottom: 1px solid #1976d2; /* Agrega una línea de separación enfocada */
+}
+
+.right-section .details-info .about .carrera .edit-carrera {
+    position: relative;
+    display: inline-block;
+}
+
+.right-section .details-info .about .carrera .edit-carrera select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 10px); /* Ajustar al ancho del contenedor padre */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 100;
+    opacity: 0; /* Inicialmente oculto */
+    pointer-events: none; /* Evitar interacciones */
+    transition: opacity 0.3s ease;
+}
+
+.right-section .details-info .about .carrera .edit-carrera select.active {
+    opacity: 1; /* Mostrar cuando está activo */
+    pointer-events: auto; /* Habilitar interacciones */
+}
+
+/* Estilos para el select */
+.select-container select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.select-container select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/*ESTILOS TABLA*/
+
+.main .usuario-table table{
+    background: #fff;
+    padding: 15px;
+    width: 100%;
+    border-radius: 14px;
+    border-spacing: 0 8px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.main .usuario-table table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.main .usuario-table table thead th{
+    text-align: center;
+}
+.main .usuario-table table thead tr th{
+    text-align: center;
+}
+
+.main .usuario-table table tbody tr.selected,
+.main .usuario-table table tbody tr:hover{
+    border-radius: 14px;
+    background: #e8eaf6;
+}
+
+.main .usuario-table table tbody tr td{
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.main .usuario-table table tbody tr td.name,
+.main .usuario-table table tbody tr td.last-namePa,
+.main .usuario-table table tbody tr td.last-nameMa,
+.main .usuario-table table tbody tr td.user,
+.main .usuario-table table tbody tr td.role
+{
+    color: #999;
+    font-size: 14px;
+}
+
+.plusButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Espacio entre los botones */
+}
+
+.plusButtons .editCont button,
+.plusButtons .deleteCont button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 16px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cursor de tipo puntero al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    border-radius: 4px;
+}
+
+.plusButtons .editCont button:hover,
+.plusButtons .deleteCont button:hover {
+    background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón */
+}
+
+
+/* Estilos para el contenedor del modal */
+#modalEditImage {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el modal */
+#modalEditImage .modal {
+    width: 40%;
+    height: 50%;
+    max-width: 500px; /* Limitamos el ancho máximo */
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /*padding: 20px; /* Añadimos espacio interno */
+    /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    position: relative;
+    transition: 1s;
+    transform: translateY(0%);
+}
+
+/* Estilos para la imagen */
+#modalEditImage .modal img {
+    width: 150px; /* Reducimos el tamaño */
+    height: 150px;
+    border-radius: 50%; /* Forma circular */
+    margin: 0 auto 20px; /* Centramos la imagen */
+}
+
+/* Estilos para el texto */
+#modalEditImage.modal-texts {
+    margin-bottom: 20px; /* Añadimos espacio inferior */
+}
+
+/* Estilos para el input */
+#modalEditImage .modal-texts input[type="file"] {
+    margin-top: 10px; /* Espacio entre la imagen y el input */
+}
+
+/* Estilos para el mensaje */
+#modalEditImage .modal-texts p {
+    margin-top: 10px; /* Espacio entre el input y el mensaje */
+    color: #777; /* Color de texto gris */
+}
+
+#modalEditImage #closeModalImage {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #c44a4a;
+    border-radius: 8px;
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#modalEditImage .modal-close{
+    transform: translateY(-200%);
+}
+
+#profile-pic-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#profile-pic-form .column-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#preview-img {
+    width: 500px; /* Ancho deseado para la vista previa */
+    border-radius: 10px;
+    border: 6px solid #fff; /* Borde blanco alrededor de la imagen */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra alrededor de la imagen */
+}
+
+#btnLimpiar {
+    background-color: #dc3545; /* Color de fondo para el botón */
+    color: #fff; /* Color de texto para el botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btnLimpiar:hover {
+    background-color: #c82333; /* Color de fondo al pasar el cursor */
+}
+
+
+
+
+
+/* ESTILOS FORM RIGHT SECTION */
+
+
+.right-section .form-details{
+    width: 80%;
+}
+
+.right-section .form-details .inputs .detailsUser{
+    position: relative;
+    margin: 12px;
+}
+
+.right-section .form-details .inputs .detailsUser input,
+.right-section .form-details .inputs .detailsUser select {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    background: #eee;
+    color: #243659;
+    outline: none;
+}
+
+#fechNac::-webkit-datetime-edit-fields-wrapper {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#fechNac.show-datepicker::-webkit-datetime-edit-fields-wrapper,
+#fechNac.not-empty::-webkit-datetime-edit-fields-wrapper {
+    opacity: 1;
+}
+
+.right-section .form-details #user-details-form .inputs .detailsUser label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 12px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.right-section .form-details #user-details-form .inputs .detailsUser input:focus ~ label,
+.right-section .form-details #user-details-form .inputs .detailsUser input.not-empty ~ label,
+.right-section .form-details #user-details-form .inputs .detailsUser select:focus ~ label,
+.right-section .form-details #user-details-form .inputs .detailsUser select.not-empty ~ label {
+    top: 0;
+    left: 15px;
+    font-size: 11px;
+    padding: 0 2px;
+    background-color: transparent;
+}
+
+/* Estilos para los botones de Cancelar y Guardar Cambios */
+.right-section .form-details #user-details-form .btns {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.right-section .form-details .btns button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .form-details .btns #btnCancel {
+    background-color: transparent;
+    border: 1px solid #d32f2f ;
+    color: #000;
+}
+
+.right-section .form-details .btns #btnCancel:hover {
+    background-color: #ffe0e0;
+}
+
+.right-section .form-details .btns #btnSave {
+    background-color: #1976d2;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.right-section .form-details .btns #btnSave:hover {
+    background-color: #001a33;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .right-section .details-info header .profile {
+        position: static;
+    }
+
+    .right-section .details-info header .info .edit i {
+        font-size: 25px;
+    }
+
+    .right-section .details-info header .info p {
+        font-size: 13px;
+    }
+
+    .main .usuario-table table thead th {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+    .main .usuario-table table tbody tr td {
+        padding: 12px 0;
+        font-size: 12px;
+    }
+
+    .details-info .form-details .inputs .detailsUser input,
+    .details-info .form-details .inputs .detailsUser select {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .right-section .details-info header .profile {
+        position: static;
+    }
+
+    .right-section .details-info header .info .edit i {
+        font-size: 20px;
+    }
+
+    .right-section .details-info header .info p {
+        display: none;
+    }
+
+    .main .usuario-table table thead th {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+    .main .usuario-table table tbody tr td {
+        padding: 12px 0;
+        font-size: 12px;
+    }
+
+    .details-info .form-details .inputs .detailsUser input,
+    .details-info .form-details .inputs .detailsUser select {
+        width: 100%;
+    }
+
+}

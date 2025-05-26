@@ -1,0 +1,231 @@
+/* Estilos para la Lista de Inscripciones */
+.main .registrations {
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main .registrations-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.main .registrations-table th, 
+.main .registrations-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.main .registrations-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.registrations tbody tr:hover {
+    background-color: #e5e7eb;
+}
+
+.main .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.main .user-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.main .user-details p {
+    margin: 0;
+}
+
+.main .user-details p:last-child {
+    color: #555;
+    font-size: 12px;
+}
+
+.main .status {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.main .status.aprobado {
+    background-color: #28a745;
+}
+
+.main .status.pendiente {
+    background-color: #ffc107;
+}
+
+.main .status.rechazado {
+    background-color: #dc3545;
+}
+
+/* Estilos para el detalle de la inscripción */
+.registration-details {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.registration-details .registration-info .info-section {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-details .registration-info .info-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.registration-details .registration-info .info-section select,
+.registration-details .registration-info .info-section input[type="date"],
+.registration-details .registration-info .info-section input[type="number"],
+.registration-details .registration-info .info-section textarea {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.registration-details .registration-info .info-section textarea{
+    resize: none; 
+}
+
+.registration-details .registration-info .info-section select:focus,
+.registration-details .registration-info .info-section input[type="date"]:focus,
+.registration-details .registration-info .info-section input[type="number"]:focus,
+.registration-details .registration-info .info-section textarea:focus {
+    outline: none;
+    border-color: #5c7cfa;
+}
+
+.registration-details .modal-footer {
+    gap: 10px;
+    display: flex;
+}
+
+.registration-details .modal-footer button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+}
+
+.registration-details .modal-footer button:first-child {
+    background-color: #18181b;
+    color: #fff;
+}
+
+.registration-details .modal-footer button:first-child:hover {
+    background-color: #18181be1;
+}
+
+.registration-details .modal-footer button:last-child {
+    background-color: #fff;
+    color: #18181b;
+    border: 1px solid #18181b;
+}
+
+.registration-details .modal-footer button:last-child:hover {
+    border-color: #18181be1;
+}
+
+.right-section .info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-section .registration-details .regi-body .info-header .user-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.right-section .registration-details .regi-body .info-header .user-info p {
+    margin: 5px 0 15px;
+    color: #555;
+}
+
+.right-section .registration-details .regi-body .info-header .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .info-header .vacant-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section .info-header .vacant-info label {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.right-section .info-header .vacant-info input {
+    margin: 5px 0 15px;
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: auto;
+}
+
+.right-section .fech-state {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-section .registration-info .horarie-edit {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.right-section .registration-info .horarie-edit select.horario-dia-select,
+.right-section .registration-info .horarie-edit input.horario-input {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+}
+
+
+/* Estilos para el ícono de editar y los botones */
+.main .registrations .editToggle {
+    cursor: pointer;
+    position: relative;
+}
+
+.main .registrations .editToggle::after {
+    content: 'Editar';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    background-color: #fff;
+    padding: 2px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: none;
+}
+
+.main .registrations .editToggle:hover::after {
+    display: block;
+}
+

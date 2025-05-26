@@ -1,0 +1,177 @@
+
+.usuario-habilites {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.usuario-habilites table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.usuario-habilites th, 
+.usuario-habilites td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.usuario-habilites th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+}
+
+.usuario-habilites tbody tr:hover {
+    background-color: #e5e7eb;
+}
+
+.usuario-habilites td:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usuario-habilites input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.usuario-habilites input[type="checkbox"]:checked {
+    background-color: #18181b;
+    border-color: #18181b;
+}
+
+.usuario-habilites input[type="checkbox"]:checked::before {
+    content: '✔';
+    display: block;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+}
+
+/* Asignar Categoria Section */
+.asign-cont {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.asign-cont .user-sel,
+.asign-cont .categorie-select,
+.asign-cont .subcategories-select,
+.asign-cont .subcategorie-Point,
+.asign-cont .state {
+    display: flex;
+    flex-direction: column;
+}
+
+.asign-cont .user-sel label,
+.asign-cont .categorie-select label,
+.asign-cont .subcategories-select label,
+.asign-cont .subcategorie-Point label,
+.asign-cont .state label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.asign-cont .user-sel input[type="text"],
+.asign-cont .categorie-select select,
+.asign-cont .subcategories-select select,
+.asign-cont .subcategorie-Point input[type="text"],
+.asign-cont .state select {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.asign-cont .subcategories-select > div {
+    display: none;
+}
+
+.asign-cont .btns-abilities {
+    display: flex;
+    gap: 10px;
+}
+
+.asign-cont .btns-abilities button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+}
+
+#edit-btn{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    background-color: #18181b;
+    color: #fff;
+}
+
+#edit-btn:hover{
+    background-color: #18181be1;
+}
+
+.asign-cont .btns-abilities button:first-child {
+    background-color: #18181b;
+    color: #fff;
+}
+
+.asign-cont .btns-abilities button:first-child:hover {
+    background-color: #18181be1;
+}
+
+.asign-cont .btns-abilities button:last-child {
+    background-color: #fff;
+    color: #18181b;
+    border: 1px solid #18181b;
+}
+
+.asign-cont .btns-abilities button:last-child:hover {
+    border-color: #18181be1;
+}
+
+/* Funciones Adicionales Section */
+.aditionals {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.aditionals button {
+    padding: 10px;
+    background-color: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.aditionals button:hover {
+    background-color: #18181be1;
+}

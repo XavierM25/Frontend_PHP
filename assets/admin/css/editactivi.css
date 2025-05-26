@@ -1,0 +1,362 @@
+/* Container */
+.cont-activities {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+/* Top Section */
+.cont-activities .top {
+    display: flex;
+    gap: 20px;
+}
+
+.cont-activities .categories, .cont-activities .subcategories {
+    padding: 20px;
+    flex: 1;
+}
+
+.cont-activities .categories .title h3,
+.cont-activities .subcategories .title h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.cont-activities .categories .list-cate ul,
+.cont-activities .subcategories .list-subcate ul {
+    list-style: none;
+}
+
+.cont-activities .categories .list-cate ul li,
+.cont-activities .subcategories .list-subcate ul li {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cont-activities .categories .list-cate ul li:hover,
+.cont-activities .subcategories .list-subcate ul li:hover {
+    background-color: #e5e7eb;
+}
+
+/* Create Subcategory */
+.cont-activities .subcategories .create-subcate {
+    margin-top: 20px;
+}
+
+.cont-activities .subcategories .create-subcate .title h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.cont-activities .subcategories .create-subcate .inpts {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cont-activities .subcategories .create-subcate .inpts input.subcategoria-input,
+.cont-activities .subcategories .create-subcate .inpts input.vacantes-input {
+    padding: 8px;
+    border: 2px solid #e4e4e7;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.cont-activities .subcategories .create-subcate .inpts select{
+    padding: 8px;
+    border: 2px solid #e4e4e7;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.cont-activities .subcategories .create-subcate .btn-subcate {
+    display: flex;
+    gap: 10px;
+}
+
+.cont-activities .subcategories .create-subcate .btn-subcate button.btn-crear-subcate {
+    padding: 10px;
+    background-color: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.cont-activities .subcategories .create-subcate .btn-subcate button.btn-crear-subcate:hover {
+    background-color: #18181be1;
+}
+
+/* Bottom Section */
+.cont-activities .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cont-activities .details-subca{
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.cont-activities .details-subca .title h3{
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Details Subcategory */
+.cont-activities .details-subca .inpts {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cont-activities .details-subca .inpts input.detalle-nombre-input,
+.cont-activities .details-subca .inpts input.detalle-vacantes-input {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.cont-activities .details-subca .btns-sucate {
+    display: flex;
+    gap: 10px;
+}
+
+.cont-activities .details-subca .btns-sucate button.btn-guardar{
+    padding: 10px;
+    background-color: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cont-activities .details-subca .btns-sucate button.btn-guardar:hover{
+    background-color: #18181be1;
+}
+
+.cont-activities .details-subca .btns-sucate .btn-eliminar{
+    padding: 10px;
+    background-color: #fff;
+    color: #18181b;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cont-activities .details-subca .btns-sucate button.btn-eliminar:hover {
+    border-color: #18181be1;
+}
+
+
+/* Horaries Subcategory in Right Section */
+.right-section .horaries-subca {
+    background-color: #ffff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.right-section .horaries-subca .title h3 {
+    margin-bottom: 10px;
+}
+
+.right-section .horaries-subca .list-horaries ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.right-section .horaries-subca .list-horaries ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.right-section .horaries-subca .list-horaries ul li .data {
+    display: flex;
+    gap: 5px;
+}
+
+.right-section .horaries-subca .list-horaries ul li button.btn-eliminar-horario {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right-section .horaries-subca .list-horaries ul li button.btn-eliminar-horario:hover {
+    background-color: #c0392b;
+}
+
+.right-section .horaries-subca .inpts-horaries {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.right-section .horaries-subca .inpts-horaries .inpts-hours{
+    display: flex;
+    gap: 4px;
+}
+
+.right-section .horaries-subca .inpts-horaries .inpts-hours input.horario-input{
+    padding: 8px;
+    border: 2px solid #ddd;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.right-section .horaries-subca .inpts-horaries select.horario-dia-select{
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.right-section .horaries-subca .btns-sucate {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.right-section .horaries-subca .btns-sucate button.btn-agregar-horario {
+    padding: 10px;
+    background-color: #18181b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.right-section .horaries-subca .btns-sucate button.btn-agregar-horario:hover {
+    background-color: #18181be1;
+}
+
+/* Estilo para cuando se hace hover sobre una categoría o subcategoría */
+.list-cate ul li:hover,
+.list-subcate ul li:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+
+/* Estilo para cuando una categoría o subcategoría está seleccionada */
+.list-cate ul li.active,
+.list-subcate ul li.active {
+    background-color: #e0e0e0;
+}
+
+
+
+/* Vacantes Section */
+.right-section .vacantes-cat{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(136, 148, 171, 0.2), 0 24px 20px -24px rgba(71, 82, 107, 0.1);
+}
+
+.right-section .vacantes-cat .list-vacantes {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.right-section .vacantes-cat .list-vacantes .total,
+.right-section .vacantes-cat .list-vacantes .disponibles,
+.right-section .vacantes-cat .list-vacantes .ocupadas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-section .vacantes-cat .list-vacantes .total h5,
+.right-section .vacantes-cat .list-vacantes .disponibles h5,
+.right-section .vacantes-cat .list-vacantes .ocupadas h5 {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .cont-activities .subcategories .create-subcate .inpts{
+        flex-direction: column;
+    }
+    .cont-activities .details-subca .inpts{
+        flex-direction: column;
+    }
+
+        .cont-activities .top {
+            flex-direction: column;
+        }
+    
+        .cont-activities .categories, .cont-activities .subcategories {
+            padding: 10px;
+        }
+    
+        .cont-activities .categories .title h3,
+        .cont-activities .subcategories .title h3 {
+            font-size: 18px;
+        }
+    
+        .cont-activities .categories .list-cate ul li,
+        .cont-activities .subcategories .list-subcate ul li {
+            padding: 8px;
+            font-size: 14px;
+        }
+    
+        .cont-activities .subcategories .create-subcate .inpts input.subcategoria-input,
+        .cont-activities .subcategories .create-subcate .inpts input.vacantes-input {
+            padding: 6px;
+        }
+
+        .right-section .horaries-subca .list-horaries ul li{
+            flex-direction: column;
+            align-items:start;
+        }
+
+        .right-section .horaries-subca .inpts-horaries{
+            flex-direction: column;
+        }
+        
+}
+
+@media screen and (max-width: 576px) {
+    .cont-activities .top {
+        flex-direction: column;
+    }
+
+    .cont-activities .categories .list-cate ul li,
+    .cont-activities .subcategories .list-subcate ul li {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .cont-activities .subcategories .create-subcate .inpts input.subcategoria-input,
+    .cont-activities .subcategories .create-subcate .inpts input.vacantes-input {
+        padding: 4px;
+        font-size: 10px;
+    }
+}
