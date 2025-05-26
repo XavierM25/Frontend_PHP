@@ -41,9 +41,22 @@ require_once("head.php");
     </nav>
 
     <div class="sign-out">
-        <a href="https://backend-laravel-wl09.onrender.com/api/logout" id="logout-button">
+        <a href="#" id="logout-button">
             <i class="ri-logout-box-r-line"></i>
             <h3>Cerrar Sesión</h3>
         </a>
     </div>
 </header>
+
+<script>
+document.getElementById('logout-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Limpiar el localStorage
+    localStorage.removeItem('token');
+    localStorage.removeItem('rol_id');
+    
+    // Redirigir al login
+    window.location.href = '/frontend_php/auth/login/login.php';
+});
+</script>

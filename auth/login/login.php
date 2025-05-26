@@ -35,7 +35,7 @@
                     <button id="log-sign-in">Iniciar Sesión</button>
                 </form>
                 <div class="redirect-admin">
-                    <a id="redirect-admin" href="../Login Admin/index.php">Ingresa como Admin</a>
+                    <a id="redirect-admin" href="../login_admin/index.php">Ingresa como Admin</a>
                 </div>
             </div>
         </section>

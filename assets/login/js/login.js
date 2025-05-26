@@ -62,22 +62,24 @@ document.getElementById("log-sign-in").addEventListener("click", function (e) {
     .then((data) => {
       console.log("Parsed response data:", data);
       if (data.status) {
+        console.log("Login exitoso, guardando datos");
+
+        // Guardar en localStorage
         localStorage.setItem("token", data.token);
         localStorage.setItem("rol_id", data.rol_id);
 
         if (data.rol_id === 1) {
-          // Cliente - Redirigir a la ruta correcta
-          window.location.href =
-            "http://localhost/frontend_php/Cliente/index.php";
+          console.log("Redirigiendo a página de cliente");
+          window.location.href = "/frontend_php/Cliente/index.php";
         } else if (data.rol_id === 2) {
-          // Administrador
+          console.log("Redirigiendo a página de administrador");
           alert(
             "Estás intentando iniciar sesión como administrador. ¿Quieres iniciar sesión como Administrador?"
           );
-          window.location.href =
-            "http://localhost/frontend_php/auth/login_admin/index.php";
+          window.location.href = "/frontend_php/auth/login_admin/index.php";
         }
       } else {
+        console.log("Login fallido:", data.message);
         alert(data.message || "Error al iniciar sesión");
       }
     })
