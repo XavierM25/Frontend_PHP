@@ -1,89 +1,138 @@
-const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
+const container = document.getElementById("container");
+const registerBtn = document.getElementById("register");
+const loginBtn = document.getElementById("login");
 
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
+registerBtn.addEventListener("click", () => {
+  container.classList.add("active");
 });
 
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
+loginBtn.addEventListener("click", () => {
+  container.classList.remove("active");
 });
 
 // login.js
-document.getElementById('log-sign-in').addEventListener('click', function(e) {
-    e.preventDefault();
+document.getElementById("log-sign-in").addEventListener("click", function (e) {
+  e.preventDefault();
 
-    var username = document.getElementById('user-login').value;
-    var password = document.getElementById('pass-login').value;
+  var username = document.getElementById("user-login").value;
+  var password = document.getElementById("pass-login").value;
 
-    fetch('http://127.0.0.1:8000/api/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            username: username,
-            contraseña: password
-        })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status) {
-            localStorage.setItem('token', data.token);
-            localStorage.setItem('rol_id', data.rol_id);
-            
-            if (data.rol_id === 1) { // Cliente
-                window.location.href = data.home_route; // Usar la ruta proporcionada en la respuesta
-            } else if (data.rol_id === 2) { // Administrador
-                alert("Estás intentando iniciar sesión como administrador. ¿Quieres iniciar sesión como Administrador?");
-                window.location.href = "http://localhost:3000/Login%20Admin/index.php";
-            }
-        } else {
-            alert(data.message);
+  // Validar que los campos no estén vacíos
+  if (!username || !password) {
+    alert("Por favor, complete todos los campos");
+    return;
+  }
+
+  console.log("Enviando datos de login:", { username, password });
+
+  // Mostrar indicador de carga
+  const loginButton = document.getElementById("log-sign-in");
+  const originalText = loginButton.textContent;
+  loginButton.textContent = "Iniciando sesión...";
+  loginButton.disabled = true;
+
+  // Usar la URL del proxy
+  fetch("http://localhost/frontend_php/api/proxy/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      username: username,
+      contraseña: password,
+    }),
+  })
+    .then((response) => {
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+      return response.text().then((text) => {
+        console.log("Raw response:", text);
+        try {
+          if (!text) {
+            throw new Error("Empty response from server");
+          }
+          return JSON.parse(text);
+        } catch (e) {
+          console.error("Error parsing JSON:", e);
+          throw new Error("Invalid JSON response from server: " + text);
         }
+      });
     })
-    .catch(error => console.error('Error:', error));
-});
+    .then((data) => {
+      console.log("Parsed response data:", data);
+      if (data.status) {
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("rol_id", data.rol_id);
 
-// GOOGLE
-document.addEventListener('DOMContentLoaded', function() {
-    const googleIcon = document.getElementById('google-icon');
-
-    googleIcon.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        fetch('http://127.0.0.1:8000/api/auth/google', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('There has been a problem with your fetch operation:', error);
-        });
+        if (data.rol_id === 1) {
+          // Cliente - Redirigir a la ruta correcta
+          window.location.href =
+            "http://localhost/frontend_php/Cliente/index.php";
+        } else if (data.rol_id === 2) {
+          // Administrador
+          alert(
+            "Estás intentando iniciar sesión como administrador. ¿Quieres iniciar sesión como Administrador?"
+          );
+          window.location.href =
+            "http://localhost/frontend_php/auth/login_admin/index.php";
+        }
+      } else {
+        alert(data.message || "Error al iniciar sesión");
+      }
+    })
+    .catch((error) => {
+      console.error("Error completo:", error);
+      alert("Error al iniciar sesión: " + error.message);
+    })
+    .finally(() => {
+      // Restaurar el botón
+      loginButton.textContent = originalText;
+      loginButton.disabled = false;
     });
 });
 
+// GOOGLE - Solo ejecutar si el elemento existe
+const googleIcon = document.getElementById("google-icon");
+if (googleIcon) {
+  googleIcon.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    fetch("http://localhost/frontend_php/api/proxy/google-auth", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error(
+          "There has been a problem with your fetch operation:",
+          error
+        );
+      });
+  });
+}
+
 // Mostrar contraseña event
 function mostrarContrasena(idPassword, idIcon) {
-    let inputPassword = document.getElementById(idPassword);
-    let icon = document.getElementById(idIcon);
+  let inputPassword = document.getElementById(idPassword);
+  let icon = document.getElementById(idIcon);
 
-    if (inputPassword.type === "password" && icon.classList.contains("fa-eye")) {
-        inputPassword.type = "text";
-        icon.classList.replace("fa-eye", "fa-eye-slash");
-    } else {
-        inputPassword.type = "password";
-        icon.classList.replace("fa-eye-slash", "fa-eye");
-    }
+  if (inputPassword.type === "password" && icon.classList.contains("fa-eye")) {
+    inputPassword.type = "text";
+    icon.classList.replace("fa-eye", "fa-eye-slash");
+  } else {
+    inputPassword.type = "password";
+    icon.classList.replace("fa-eye-slash", "fa-eye");
+  }
 }

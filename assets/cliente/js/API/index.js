@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para cargar y mostrar categorías
   function fetchAndShowCategories() {
-    fetch("https://backend-laravel-wl09.onrender.com/api/categories", {
+    fetch("http://localhost/frontend_php/api/proxy/categories", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para cargar y mostrar subcategorías
   function fetchAndShowSubcategories(categoryId) {
     fetch(
-      `https://backend-laravel-wl09.onrender.com/api/categories/${categoryId}/subcategories`,
+      `http://localhost/frontend_php/api/proxy/categories/${categoryId}/subcategories`,
       {
         method: "GET",
         headers: {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para cargar y mostrar videos
   function fetchAndShowVideos() {
-    fetch("https://backend-laravel-wl09.onrender.com/api/videos", {
+    fetch("http://localhost/frontend_php/api/proxy/videos", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -343,16 +343,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function likeVideo(videoId, likeDiv) {
     const liked = likeDiv.dataset.liked === "true"; // Verificar el estado del like
 
-    fetch(
-      `https://backend-laravel-wl09.onrender.com/api/videos/${videoId}/like`,
-      {
-        method: liked ? "DELETE" : "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + localStorage.getItem("token"),
-        },
-      }
-    )
+    fetch(`http://localhost/frontend_php/api/proxy/videos/${videoId}/like`, {
+      method: liked ? "DELETE" : "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error al cambiar el estado del like");
@@ -371,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Función para cargar y mostrar el ranking de usuarios
   function fetchAndShowRanking() {
-    fetch("https://backend-laravel-wl09.onrender.com/api/ranking", {
+    fetch("http://localhost/frontend_php/api/proxy/ranking", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
