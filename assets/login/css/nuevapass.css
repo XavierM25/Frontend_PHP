@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',  sans-serif;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2,#c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+
+.form-container{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.form-container .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.form-container .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    margin: 0 20px;
+}
+
+.form-container .header .navigation button{
+    font-size: 20px;
+    border: none;
+    background: transparent;
+}
+
+.form-container .header .navigation i{
+    font-size: 20px;
+}
+
+.form-container .header .navigation a{
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.form-container .header .navigation a:hover{
+    color: #e30512;
+}
+
+.form-container .header .search i{
+    cursor: pointer;
+    padding: 8px;
+}
+
+.form-container .header .faq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 50px;
+}
+
+.form-container .header .faq i{
+    font-size: 20px;
+    padding: 8px;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-container .header .faq i:hover{
+    color: #e30512;
+}
+
+
+.form-container form{
+    margin:10px 40px;
+}
+
+.form-container form .title{
+    margin: 25px 0px;
+}
+
+.form-container form .title h1{
+    font-size: 34px;
+}
+
+.form-container form .title p{
+    width: 90%;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+.form-container form .field{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form .field .pass,
+.form-container form .field .veri-pass{
+    padding: 10px 0;
+}
+
+.box-eye {
+    position: relative;
+}
+
+.box-eye button {
+    border: none;
+    position: absolute;
+}
+
+.box-eye .logPass{
+    position: absolute;
+    top: 14px;
+    left: 570px;
+    color: rgb(51, 47, 47);
+    cursor: pointer;
+}
+
+.form-container form .field .pass label,
+.form-container form .field .veri-pass label{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.form-container form .field .pass span,
+.form-container form .field .veri-pass span{
+    font-size: 10px;
+    margin: 50px 0px;
+}
+
+.form-container form .field input{
+    background-color: transparent;
+    width: 100%;
+    border: 2px solid #999;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-container form .field input:hover{
+    background-color: #eee;
+    border-color: #001;
+}
+
+.form-container form .btn {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 30px 60px;
+}
+
+.form-container form .btn input{
+    background-color: #e30512;
+    width: 100%;
+    border: 1px solid transparent;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-container form .btn input:hover{
+    background-color: #6e1f24;
+}
