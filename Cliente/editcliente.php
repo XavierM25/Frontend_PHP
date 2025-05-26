@@ -1,5 +1,5 @@
 <?php
-    require_once("view/head/header.php");
+require_once("../components/cliente/header.php");
 ?>
 
 <!-- Formulario para subir la imagen de perfil -->
@@ -15,7 +15,7 @@
 
 
 <?php
-require_once("view/head/main.php");
+require_once("../components/cliente/main.php");
 ?>
 
 <section class="edit-info">
@@ -46,56 +46,56 @@ require_once("view/head/main.php");
             <div class="item">
                 <label for="carreCli">Carrera Profesional</label>
                 <select id="carreCli" name="carrera">
-                <option value="-1" disabled selected>Carrera Profesional</option>
-                            <option value="Administración y Marketing">Administración y Marketing</option>
-                            <option value="Administración y Negocios Internacionales">Administración y Negocios Internacionales</option>
-                            <option value="Administración">Administración</option>
-                            <option value="Administración en Turismo y Hotelería">Administración en Turismo y Hotelería</option>
-                            <option value="Contabilidad">Contabilidad</option>
-                            <option value="Economía">Economía</option>
-                            <option value="Gestión Pública">Gestión Pública</option>
-                            <option value="Artes & Diseño Gráfico Empresarial">Artes & Diseño Gráfico Empresarial</option>
-                            <option value="Ciencias de la Comunicación">Ciencias de la Comunicación</option>
-                            <option value="Ciencias del Deporte">Ciencias del Deporte</option>
-                            <option value="Derecho">Derecho</option>
-                            <option value="Educación Inicial">Educación Inicial</option>
-                            <option value="Educación Primaria">Educación Primaria</option>
-                            <option value="Traducción e Interpretación">Traducción e Interpretación</option>
-                            <option value="Arquitectura">Arquitectura</option>
-                            <option value="Ingeniería de Ciberseguridad">Ingeniería de Ciberseguridad</option>
-                            <option value="Ingeniería en Ciencia de Datos">Ingeniería en Ciencia de Datos</option>
-                            <option value="Ingeniería Empresarial">Ingeniería Empresarial</option>
-                            <option value="Ingeniería Agroindustrial">Ingeniería Agroindustrial</option>
-                            <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
-                            <option value="Ingeniería Civil">Ingeniería Civil</option>
-                            <option value="Ingeniería de Minas">Ingeniería de Minas</option>
-                            <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
-                            <option value="Ingeniería Industrial">Ingeniería Industrial</option>
-                            <option value="Ingeniería Mecánica Eléctrica">Ingeniería Mecánica Eléctrica</option>
-                            <option value="Enfermería">Enfermería</option>
-                            <option value="Estomatología">Estomatología</option>
-                            <option value="Medicina">Medicina</option>
-                            <option value="Nutrición">Nutrición</option>
-                            <option value="Psicología">Psicología</option>
-                            <option value="Tecnología Médica">Tecnología Médica</option>
+                    <option value="-1" disabled selected>Carrera Profesional</option>
+                    <option value="Administración y Marketing">Administración y Marketing</option>
+                    <option value="Administración y Negocios Internacionales">Administración y Negocios Internacionales</option>
+                    <option value="Administración">Administración</option>
+                    <option value="Administración en Turismo y Hotelería">Administración en Turismo y Hotelería</option>
+                    <option value="Contabilidad">Contabilidad</option>
+                    <option value="Economía">Economía</option>
+                    <option value="Gestión Pública">Gestión Pública</option>
+                    <option value="Artes & Diseño Gráfico Empresarial">Artes & Diseño Gráfico Empresarial</option>
+                    <option value="Ciencias de la Comunicación">Ciencias de la Comunicación</option>
+                    <option value="Ciencias del Deporte">Ciencias del Deporte</option>
+                    <option value="Derecho">Derecho</option>
+                    <option value="Educación Inicial">Educación Inicial</option>
+                    <option value="Educación Primaria">Educación Primaria</option>
+                    <option value="Traducción e Interpretación">Traducción e Interpretación</option>
+                    <option value="Arquitectura">Arquitectura</option>
+                    <option value="Ingeniería de Ciberseguridad">Ingeniería de Ciberseguridad</option>
+                    <option value="Ingeniería en Ciencia de Datos">Ingeniería en Ciencia de Datos</option>
+                    <option value="Ingeniería Empresarial">Ingeniería Empresarial</option>
+                    <option value="Ingeniería Agroindustrial">Ingeniería Agroindustrial</option>
+                    <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+                    <option value="Ingeniería Civil">Ingeniería Civil</option>
+                    <option value="Ingeniería de Minas">Ingeniería de Minas</option>
+                    <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                    <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                    <option value="Ingeniería Mecánica Eléctrica">Ingeniería Mecánica Eléctrica</option>
+                    <option value="Enfermería">Enfermería</option>
+                    <option value="Estomatología">Estomatología</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Nutrición">Nutrición</option>
+                    <option value="Psicología">Psicología</option>
+                    <option value="Tecnología Médica">Tecnología Médica</option>
                 </select>
             </div>
             <div class="item">
                 <label for="campuCli">Campus</label>
                 <select id="campuCli" name="campus">
-                <option value="-1" disabled selected>Campus</option>
-                            <option value="Los Olivos">Los Olivos</option>
-                            <option value="Trujillo">Trujillo</option>
-                            <option value="Ate">Ate</option>
-                            <option value="Callao">Callao</option>
-                            <option value="San Juan de Lurigancho">San Juan de Lurigancho</option>
-                            <option value="Chiclayo">Chiclayo</option>
-                            <option value="Chimbote">Chimbote</option>
-                            <option value="Piura">Piura</option>
-                            <option value="Tarapoto">Tarapoto</option>
-                            <option value="Chepén">Chepén</option>
-                            <option value="Huaraz">Huaraz</option>
-                            <option value="Moyobamba">Moyobamba</option>
+                    <option value="-1" disabled selected>Campus</option>
+                    <option value="Los Olivos">Los Olivos</option>
+                    <option value="Trujillo">Trujillo</option>
+                    <option value="Ate">Ate</option>
+                    <option value="Callao">Callao</option>
+                    <option value="San Juan de Lurigancho">San Juan de Lurigancho</option>
+                    <option value="Chiclayo">Chiclayo</option>
+                    <option value="Chimbote">Chimbote</option>
+                    <option value="Piura">Piura</option>
+                    <option value="Tarapoto">Tarapoto</option>
+                    <option value="Chepén">Chepén</option>
+                    <option value="Huaraz">Huaraz</option>
+                    <option value="Moyobamba">Moyobamba</option>
                 </select>
             </div>
             <div class="item">
@@ -111,7 +111,7 @@ require_once("view/head/main.php");
 </section>
 
 <?php
-require_once("view/head/aside.php");
+require_once("../components/cliente/aside.php");
 ?>
 
 <h3>Información Login</h3>
@@ -186,11 +186,12 @@ require_once("view/head/aside.php");
             </form>
         </div>
     </div>
-</section>        
+</section>
 </aside>
 
-<script src="assets/js/edicliente.js"></script>
-<script src="assets/js/API/perfil.js"></script>
-<script src="assets/js/navigation.js"></script>
+<script src="../assets/cliente/js/edicliente.js"></script>
+<script src="../assets/cliente/js/API/perfil.js"></script>
+<script src="../assets/cliente/js/navigation.js"></script>
 </body>
+
 </html>

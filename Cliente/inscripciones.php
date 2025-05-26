@@ -1,9 +1,9 @@
 <?php
-    require_once("view/head/header.php");
+require_once("../components/cliente/header.php");
 ?>
 
 <?php
-    require_once("view/head/main.php");
+require_once("../components/cliente/main.php");
 ?>
 
 <section class="ins-container">
@@ -81,7 +81,7 @@
 
 
 <?php
-require_once("view/head/aside.php");
+require_once("../components/cliente/aside.php");
 ?>
 
 <section class="slider">
@@ -137,8 +137,9 @@ require_once("view/head/aside.php");
 
 </aside>
 
-<script src="assets/js/navigation.js"></script>
-<script src="assets/js/elementsInscrip.js"></script>
-<script src="assets/js/API/inscripciones.js"></script>
+<script src="../assets/cliente/js/navigation.js"></script>
+<script src="../assets/cliente/js/elementsInscrip.js"></script>
+<script src="../assets/cliente/js/API/inscripciones.js"></script>
 </body>
+
 </html>

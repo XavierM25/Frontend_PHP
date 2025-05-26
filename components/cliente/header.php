@@ -1,5 +1,5 @@
 <?php
-require_once("view/head/head.php");
+require_once("head.php");
 ?>
 
 <header class="left-section">
@@ -41,7 +41,7 @@ require_once("view/head/head.php");
     </nav>
 
     <div class="sign-out">
-        <a href="http://127.0.0.1:8000/api/logout" id="logout-button">
+        <a href="https://backend-laravel-wl09.onrender.com/api/logout" id="logout-button">
             <i class="ri-logout-box-r-line"></i>
             <h3>Cerrar Sesión</h3>
         </a>

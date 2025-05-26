@@ -1,7 +1,6 @@
+<?php require_once("../components/cliente/header.php"); ?>
 
-<?php require_once("view/head/header.php");?>
-
-<?php require_once("view/head/main.php");?>
+<?php require_once("../components/cliente/main.php"); ?>
 
 <section class="banner">
     <div class="share">
@@ -26,20 +25,20 @@
 
 <section class="separator">
     <h3>Descubre Deportes y Noticias</h3>
-        <ul class="categories">
-            <!-- Categorias -->
-        </ul>
-        <ul class="subcategories">
-            <!--Subcategorias-->
-        </ul>
+    <ul class="categories">
+        <!-- Categorias -->
+    </ul>
+    <ul class="subcategories">
+        <!--Subcategorias-->
+    </ul>
 </section>
 
 
 <section class="video-items-cont">
-    
+
 </section>
 
-<?php require_once("view/head/aside.php"); ?>
+<?php require_once("../components/cliente/aside.php"); ?>
 
 <h3>Reproduciendo Actualmente</h3>
 
@@ -50,7 +49,7 @@
             <h5>No se está reproduciendo un video</h5>
             <div class="rate">
                 <i class="ri-heart-2-fill"></i>
-                <h5>UCV</h5> 
+                <h5>UCV</h5>
             </div>
         </div>
     </div>
@@ -62,8 +61,9 @@
 
 </section>
 
-<script src="assets/js/dsbrd-pr.js"></script>
-<script src="assets/js/API/index.js"></script>
-<script src="assets/js/navigation.js"></script>
+<script src="../assets/cliente/js/dsbrd-pr.js"></script>
+<script src="../assets/cliente/js/API/index.js"></script>
+<script src="../assets/cliente/js/navigation.js"></script>
 </body>
+
 </html>
