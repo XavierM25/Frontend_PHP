@@ -5,10 +5,22 @@ const sidebarItems = document.querySelectorAll(".sidebar .item");
 // Play/Pause video on mouse enter/leave
 allVideos.forEach((video) => {
   video.addEventListener("mouseover", () => {
-    video.play();
+    if (video.readyState >= 2) {
+      // Verificar si el video está listo para reproducirse
+      video.play().catch((error) => {
+        console.warn("No se pudo reproducir el video:", error);
+      });
+    }
   });
+
   video.addEventListener("mouseleave", () => {
     video.pause();
+  });
+
+  // Manejar errores de carga de video
+  video.addEventListener("error", (e) => {
+    console.warn("Error al cargar el video:", video.src);
+    video.style.display = "none"; // Ocultar el video si hay error
   });
 });
 
@@ -37,24 +49,25 @@ window.addEventListener("scroll", () => {
 document.addEventListener("DOMContentLoaded", function () {
   const logoutButton = document.querySelector("#logout-button");
 
-  logoutButton.addEventListener("click", function (e) {
-    e.preventDefault();
+  if (logoutButton) {
+    logoutButton.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    fetch("https://backend-laravel-wl09.onrender.com/api/logout", {
-      method: "GET", // Usualmente se usa GET para logout en APIs RESTful
-      headers: {
-        Authorization: "Bearer " + localStorage.getItem("token"), // Ajusta esto según cómo manejes el token en tu frontend
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          localStorage.removeItem("token"); // Elimina el token del almacenamiento local
-          window.location.href = "/Login/login.php"; // Redirige al usuario al login
-        } else {
-          // Manejar cualquier error de respuesta aquí
-          console.error("Error al cerrar sesión:", response.statusText);
-        }
+      fetch("http://localhost/frontend_php/api/proxy/logout", {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
       })
-      .catch((error) => console.error("Error en fetch:", error));
-  });
+        .then((response) => {
+          if (response.ok) {
+            localStorage.removeItem("token");
+            window.location.href = "/frontend_php/auth/login/login.php";
+          } else {
+            console.warn("Error al cerrar sesión:", response.statusText);
+          }
+        })
+        .catch((error) => console.warn("Error en fetch:", error));
+    });
+  }
 });

@@ -36,9 +36,9 @@ document
           } else if (data.rol_id === 1) {
             // Cliente
             alert(
-              "No tienes autorización para iniciar sesión como Cliente desde esta página."
+              "No tienes autorización para iniciar sesión como Cliente desde esta página. Serás redirigido al login de Cliente."
             );
-            window.location.href = "../../../auth/login/login.php";
+            window.location.href = "../login/login.php";
           }
         } else {
           alert(data.message);

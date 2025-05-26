@@ -166,12 +166,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (video) {
       likesElement.textContent = video.likes;
       dateElement.textContent = formatDate(video.created_at);
-      videoElement.src =
-        "https://backend-laravel-wl09.onrender.com/" + video.archivo_video;
+      const videoPath = video.archivo_video.replace("storage/", "");
+      videoElement.src = `http://localhost/frontend_php/api/proxy/media/${videoPath}`;
+
+      // Manejar errores de carga del video popular
+      videoElement.addEventListener("error", () => {
+        console.warn("Error al cargar el video popular:", videoElement.src);
+        videoElement.style.display = "none";
+      });
     } else {
       likesElement.textContent = "-";
       dateElement.textContent = "-";
-      videoElement.src = ""; // Limpiar el src del video
+      videoElement.src = "";
     }
   }
 
@@ -208,21 +214,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const likeDiv = document.createElement("div");
     likeDiv.classList.add("like");
-    likeDiv.dataset.liked = false; // Agregar dataset para rastrear el estado del like
+    likeDiv.dataset.liked = false;
     const heartIcon = document.createElement("i");
     heartIcon.classList.add("ri-heart-3-fill");
     likeDiv.appendChild(heartIcon);
-    likeDiv.addEventListener("click", () => likeVideo(video.id, likeDiv)); // Manejar click en el icono de like
+    likeDiv.addEventListener("click", () => likeVideo(video.id, likeDiv));
     videoItem.appendChild(likeDiv);
 
     const videoElement = document.createElement("video");
-    videoElement.setAttribute("preload", "metadata"); // Preload solo metadata para optimización
+    videoElement.setAttribute("preload", "metadata");
     videoElement.muted = true;
     videoElement.loop = true;
-    videoElement.classList.add("dynamic-video"); // Clase adicional para referencia y estilo CSS
+    videoElement.classList.add("dynamic-video");
 
+    // Manejar eventos del video
     videoElement.addEventListener("mouseover", () => {
-      videoElement.play();
+      if (videoElement.readyState >= 2) {
+        videoElement.play().catch((error) => {
+          console.warn("No se pudo reproducir el video:", error);
+        });
+      }
       updatePlayerSection(video);
     });
 
@@ -230,20 +241,17 @@ document.addEventListener("DOMContentLoaded", function () {
       videoElement.pause();
     });
 
-    // Manejar la carga y configuración del video
-    videoElement.addEventListener("loadeddata", () => {
-      console.log(`Video cargado: ${videoElement.src}`);
-    });
-
     videoElement.addEventListener("error", () => {
-      console.error(`Error al cargar el video: ${videoElement.src}`);
+      console.warn("Error al cargar el video:", videoElement.src);
+      videoElement.style.display = "none";
       const errorText = document.createElement("p");
       errorText.textContent = "Error al cargar el video";
       videoItem.appendChild(errorText);
     });
 
-    videoElement.src =
-      "https://backend-laravel-wl09.onrender.com/" + video.archivo_video;
+    // Usar el proxy para los videos
+    const videoPath = video.archivo_video.replace("storage/", "");
+    videoElement.src = `http://localhost/frontend_php/api/proxy/media/${videoPath}`;
     videoItem.appendChild(videoElement);
 
     const detailsDiv = document.createElement("div");
@@ -414,9 +422,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const img = document.createElement("img");
     img.classList.add("profile-image");
-    img.src =
-      "https://backend-laravel-wl09.onrender.com/" +
-      ranking.usuario.imagen_perfil;
+    const imagePath = ranking.usuario.imagen_perfil.replace("storage/", "");
+    img.src = `http://localhost/frontend_php/api/proxy/media/${imagePath}`;
+
+    // Manejar errores de carga de imagen
+    img.addEventListener("error", () => {
+      console.warn("Error al cargar la imagen de perfil:", img.src);
+      img.src = "http://localhost/frontend_php/assets/images/default.jpg";
+    });
+
     content.appendChild(img);
 
     const info = document.createElement("div");
