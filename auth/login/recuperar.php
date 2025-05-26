@@ -40,6 +40,6 @@
     </div>
 </body>
 
-<script src="assets/js/forgot-pass/recuperar.js"></script>
+<script src="../../assets/login/js/forgot-pass/recuperar.js"></script>
 
 </html>

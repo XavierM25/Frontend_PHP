@@ -41,32 +41,34 @@
             </form>
         </section>
     </div>
-    <script src="assets/js/forgot-pass/validar.js"></script>
-    <script>// Validación input
-    const verificationForm = document.getElementById('verificationForm');
-    const codeInputs = document.querySelectorAll('.veriCode-input');
+    <script src="../../assets/login/js/forgot-pass/validar.js"></script>
+    <script>
+        // Validación input
+        const verificationForm = document.getElementById('verificationForm');
+        const codeInputs = document.querySelectorAll('.veriCode-input');
 
-    codeInputs.forEach((input, index) => {
-        input.addEventListener('input', (event) => {
-            const value = event.target.value;
-            if (value && value.length === 1) {
-                if (index < codeInputs.length - 1) {
-                    codeInputs[index + 1].focus();
-                } else {
-                    event.preventDefault(); // Evitar el envío automático del formulario
+        codeInputs.forEach((input, index) => {
+            input.addEventListener('input', (event) => {
+                const value = event.target.value;
+                if (value && value.length === 1) {
+                    if (index < codeInputs.length - 1) {
+                        codeInputs[index + 1].focus();
+                    } else {
+                        event.preventDefault(); // Evitar el envío automático del formulario
+                    }
+                } else if (!value && index > 0) {
+                    codeInputs[index - 1].focus();
                 }
-            } else if (!value && index > 0) {
-                codeInputs[index - 1].focus();
-            }
-        });
+            });
 
-        input.addEventListener('keydown', (event) => {
-            const key = event.key;
-            if (key === 'Backspace' && index > 0 && !input.value) {
-                codeInputs[index - 1].focus();
-            }
+            input.addEventListener('keydown', (event) => {
+                const key = event.key;
+                if (key === 'Backspace' && index > 0 && !input.value) {
+                    codeInputs[index - 1].focus();
+                }
+            });
         });
-    });
     </script>
 </body>
+
 </html>

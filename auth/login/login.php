@@ -35,8 +35,8 @@
                     <button id="log-sign-in">Iniciar Sesión</button>
                 </form>
                 <div class="redirect-admin">
-                        <a id="redirect-admin" href="../Login Admin/index.php">Ingresa como Admin</a>
-                    </div>
+                    <a id="redirect-admin" href="../Login Admin/index.php">Ingresa como Admin</a>
+                </div>
             </div>
         </section>
 
@@ -62,8 +62,8 @@
             </div>
             <div class="form-outer">
                 <form id="register-form" action="" method="post" autocomplete="off">
-                <!--Fase 1-->    
-                <div class="page slide-page">
+                    <!--Fase 1-->
+                    <div class="page slide-page">
                         <div class="field" onsubmit="return validateStep1();">
                             <label for="name-regi">Nombre</label>
                             <input id="name-regi" name="nombr" type="text" placeholder="Nombre">
@@ -81,7 +81,7 @@
                         </div>
                     </div>
 
-                    <!--Fase 2-->  
+                    <!--Fase 2-->
                     <div class="page" onsubmit="return validateStep2();">
                         <div class="field">
                             <label for="naci-regi">Fecha de Nacimiento</label>
@@ -106,7 +106,7 @@
                         </div>
                     </div>
 
-                    <!--Fase 3-->  
+                    <!--Fase 3-->
                     <div class="page" onsubmit="return validateStep3();">
                         <div class="field">
                             <input id="email-regi" type="email" name="correo" placeholder="Email">
@@ -173,7 +173,7 @@
                         </div>
                     </div>
 
-                    <!--Fase 4-->  
+                    <!--Fase 4-->
                     <div class="page" onsubmit="return validateStep4();">
                         <div class="field">
                             <label for="pass-regi">Contraseña</label>
@@ -202,9 +202,10 @@
             </div>
         </section>
     </div>
-    <script src="assets/js/validar.js"></script>
-    <script src="assets/js/movimiento.js"></script>
-    <script src="assets/js/login.js"></script>
-    <script src="assets/js/register.js"></script>
+    <script src="../../assets/login/js/validar.js"></script>
+    <script src="../../assets/login/js/movimiento.js"></script>
+    <script src="../../assets/login/js/login.js"></script>
+    <script src="../../assets/login/js/register.js"></script>
 </body>
+
 </html>
