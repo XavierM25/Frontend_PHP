@@ -1,11 +1,13 @@
 .ins-container {
     max-width: 800px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     padding: 40px 30px; /* Aumenta el espacio interno */
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     margin-top: 30px;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 .txt-right {
@@ -70,11 +72,18 @@
     width: calc(100% - 20px);
     padding: 15px;
     margin-top: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     transition: all 0.3s;
     font-size: 18px; /* Aumenta el tamaño de la fuente */
+}
+
+.field-input input::placeholder,
+.field-input textarea::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 .field-input input:focus,
@@ -106,7 +115,7 @@
     border-radius: 20px;
     font-size: 20px; /* Aumenta el tamaño de la fuente */
     font-weight: bold;
-    background-color: #243659;
+    background-color: var(--accent-color);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -114,7 +123,7 @@
 }
 
 .button-field button:hover {
-    background-color: #365491;
+    background-color: #1a2747;
 }
 
 

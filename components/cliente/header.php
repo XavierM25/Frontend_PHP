@@ -60,3 +60,4 @@ document.getElementById('logout-button').addEventListener('click', function(e) {
     window.location.href = '/frontend_php/auth/login/login.php';
 });
 </script>
+<script src="../assets/cliente/js/theme.js"></script>

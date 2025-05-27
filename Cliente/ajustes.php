@@ -2,6 +2,8 @@
 require_once("../components/cliente/header.php");
 ?>
 
+<link rel="stylesheet" href="../assets/cliente/css/ajustes.css">
+
 <?php
 require_once("../components/cliente/main.php");
 ?>

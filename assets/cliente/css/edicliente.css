@@ -39,8 +39,9 @@
 }
 
 .main .edit-info .basic-info input,select{
-    background: #eee;
-    border: 1px solid #eee;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 15px;
@@ -54,6 +55,11 @@
 .main .edit-info .basic-info select:hover{
     border: 1px solid #243659;
     color: #243659;
+}
+
+.main .edit-info .basic-info input::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 .main .edit-info .basic-info .buttons{
@@ -83,7 +89,7 @@
     color: #243659;
     font-size: 12px;
     padding: 10px 45px;
-    border: 1px solid #000;
+    border: 1px solid #243659;
     border-radius: 8px;
     font-weight: 00;
     letter-spacing: 0.5px;
@@ -94,19 +100,20 @@
 }
 
 .main .edit-info .basic-info .buttons .save:hover{
-    background-color: #4c6dad;
+    background-color: #243659;
+    border: 1px solid #243659;
 }
 
 .main .edit-info .basic-info .buttons .back:hover{
-    border: 1px solid #4c6dad;
-    color: #4c6dad;
+    color: #243659;
+    border: 1px solid #243659;
 }
 
 
 /* INFORMACIÓN PRINICPAL */
 
 .right-section .imp-info{
-    background: #fff;
+    background-color: var(--bg-color);
     width: 100%;
     padding: 16px;
     display: flex;
@@ -117,6 +124,8 @@
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
 }
 
 .right-section .imp-info .tabs-container .tabs a{
@@ -144,7 +153,7 @@
     padding: 6px;
     font-weight: 600;
     width: 100%;
-    background: #fafafa;
+    background: var(--bg-color);
     border: 1px solid #eee;
     display: flex;
     align-items: center;
@@ -336,7 +345,9 @@
     width: 40%;
     height: 50%;
     max-width: 500px; /* Limitamos el ancho máximo */
-    background-color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -379,9 +390,9 @@
     right: 10px;
     width: 30px;
     height: 30px;
-    background-color: #c44a4a;
+    background-color: #243659;
     border-radius: 8px;
-    color: #fff;
+    color: var(--text-color);
     line-height: 30px;
     cursor: pointer;
 }
