@@ -1,0 +1,11 @@
+{
+  "name": "tu-proyecto/php",
+  "description": "Proyecto PHP para Vercel",
+  "type": "project",
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "vercel/php": "^1.0"
+  }
+}
